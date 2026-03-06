@@ -96,7 +96,7 @@ export function NavigationMenuDemo() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/docs">Why</Link>
+                <Link href="/docs">Why Us?</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -137,6 +137,14 @@ export function NavigationMenuDemo() {
                 className={navigationMenuTriggerStyle()}
               >
                 <Link href="/docs">Contact</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/docs">Login</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
