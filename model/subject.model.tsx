@@ -11,6 +11,7 @@ const subjectSchema: Schema<Subject> = new Schema(
   {
     sheetId: {
       type: Schema.Types.ObjectId,
+      ref: "Sheet",
       required: true,
     },
     slug: {

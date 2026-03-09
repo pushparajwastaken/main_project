@@ -22,7 +22,9 @@ const sheetSchema: Schema<Sheet> = new Schema(
       unqiue: true,
       lowercase: true,
     },
-    description: String,
+    description: {
+      type: String,
+    },
     isPremium: {
       type: Boolean,
       default: false,

@@ -46,11 +46,19 @@ const userSchema: Schema<User> = new Schema(
       type: Boolean,
       default: false,
     },
-    verifyToken: String,
-    verifyTokenExpiry: Date,
+    verifyToken: {
+      type: String,
+    },
+    verifyTokenExpiry: {
+      type: Date,
+    },
 
-    college: String,
-    gradYear: Number,
+    college: {
+      type: String,
+    },
+    gradYear: {
+      type: Number,
+    },
     subscription: {
       status: {
         type: String,
