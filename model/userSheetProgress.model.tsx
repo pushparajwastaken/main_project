@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-export interface userSheetProgress extends Document {
+export interface UserSheetProgress extends Document {
   userId: Schema.Types.ObjectId;
   sheetId: Schema.Types.ObjectId;
   enrolledAt: Date;
@@ -17,7 +17,7 @@ export interface userSheetProgress extends Document {
   ];
   lastActivity: Date;
 }
-const userSheetProgressSchema: Schema<userSheetProgress> = new Schema(
+const userSheetProgressSchema: Schema<UserSheetProgress> = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
     sheetId: { type: Schema.Types.ObjectId, ref: "Sheet", required: true },
@@ -41,8 +41,8 @@ const userSheetProgressSchema: Schema<userSheetProgress> = new Schema(
 userSheetProgressSchema.index({ userId: 1, sheetId: 1 }, { unique: true });
 
 const userSheetProgressModel =
-  (mongoose.models.UserSheetProgress as mongoose.Model<userSheetProgress>) ||
-  mongoose.model<userSheetProgress>(
+  (mongoose.models.UserSheetProgress as mongoose.Model<UserSheetProgress>) ||
+  mongoose.model<UserSheetProgress>(
     "UserSheetProgress",
     userSheetProgressSchema,
   );
