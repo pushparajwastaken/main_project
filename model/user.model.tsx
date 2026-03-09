@@ -1,20 +1,5 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-export interface Message extends Document {
-  content: string;
-  createdAt: Date;
-}
-const messageSchema: Schema<Message> = new Schema({
-  content: {
-    type: String,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    required: true,
-    default: Date.now(),
-  },
-});
 //subscription is directly embedded into the user to avoid a join for every auth check
 
 export interface User extends Document {
@@ -27,7 +12,6 @@ export interface User extends Document {
   role: string;
   college: string;
   gradYear: number;
-  messages: Message[];
   subscription: {
     status: string;
     plan: string;
@@ -67,7 +51,6 @@ const userSchema: Schema<User> = new Schema(
 
     college: String,
     gradYear: Number,
-    messages: [messageSchema],
     subscription: {
       status: {
         type: String,
