@@ -1,21 +1,45 @@
 import mongoose from "mongoose";
 
-type ConnectionObject = {
-  isConnected?: number;
-};
-const connection: ConnectionObject = {};
+if (!process.env.MONGODB_URI) {
+  throw new Error("MONGODB_URI is not defined in .env");
+}
 
-async function dbConnect(): Promise<void> {
-  if (connection.isConnected) {
+const MONGODB_URI = process.env.MONGODB_URI;
+
+// Persists across hot reloads in development
+declare global {
+  var mongoose: {
+    conn: mongoose.Connection | null;
+    promise: Promise<typeof import("mongoose")> | null;
+  };
+}
+
+let cached = global.mongoose || { conn: null, promise: null };
+global.mongoose = cached;
+
+async function dbConnect(): Promise<mongoose.Connection> {
+  if (cached.conn) {
     console.log("Already connected to the database");
-    return;
+    return cached.conn;
   }
+
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(MONGODB_URI, {
+      bufferCommands: false,
+      maxPoolSize: 10,
+    });
+  }
+
   try {
-    const db = await mongoose.connect(process.env.MONGODB_URI || "", {});
-    connection.isConnected = db.connections[0].readyState;
+    const db = await cached.promise;
+    cached.conn = db.connections[0];
     console.log("DB Connected Successfully");
+    return cached.conn;
   } catch (error) {
-    console.log("Database connection error", error);
-    process.exit(1);
+    cached.promise = null;
+    console.error("Database connection error:", error);
+    throw error;
   }
 }
+
+export default dbConnect;
