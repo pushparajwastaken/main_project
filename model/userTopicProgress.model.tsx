@@ -35,3 +35,4 @@ const UserTopicProgressModel =
     "UserTopicProgress",
     UserTopicProgressSchema,
   );
+export default UserTopicProgressModel;

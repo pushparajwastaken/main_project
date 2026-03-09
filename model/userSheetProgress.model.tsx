@@ -46,3 +46,5 @@ const userSheetProgressModel =
     "UserSheetProgress",
     userSheetProgressSchema,
   );
+
+export default userSheetProgressModel;
