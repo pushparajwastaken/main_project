@@ -10,7 +10,7 @@ export interface Sheet extends Document {
   totalTopics: number;
 }
 
-const sheetSchema = new Schema(
+const sheetSchema: Schema<Sheet> = new Schema(
   {
     title: {
       type: String,
