@@ -21,7 +21,7 @@ const subscriptionSchema = new Schema(
     status: { type: String, enum: ["active", "expired", "cancelled"] },
     amount: Number,
     currency: { type: String, default: "INR" },
-    gateway: { type: String, enum: ["razorpay", "stripe"] },
+    gateway: { type: String, enum: ["razorpay", "stripe", "bmac"] },
     gatewaySubId: String,
     gatewayPayId: String,
     startedAt: Date,
