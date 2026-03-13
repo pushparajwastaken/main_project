@@ -2,8 +2,6 @@ import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/user.model";
 import bcrypt from "bcryptjs";
 import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
-import { success } from "zod";
-import { User } from "lucide-react";
 
 export async function POST(request: Request) {
   await dbConnect();
@@ -42,6 +40,17 @@ export async function POST(request: Request) {
         existingUserByEmail.verifyToken = verifyCode;
         existingUserByEmail.verifyTokenExpiry = new Date(Date.now() + 3600000);
         await existingUserByEmail.save();
+        const emailResponse = await sendVerificationEmail(
+          email,
+          existingUserByEmail.username,
+          verifyCode,
+        );
+        if (!emailResponse.success) {
+          return Response.json(
+            { success: false, message: emailResponse.message },
+            { status: 500 },
+          );
+        }
       }
     } else {
       const hashedPassword = await bcrypt.hash(password, 10);
