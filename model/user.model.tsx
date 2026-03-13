@@ -9,7 +9,6 @@ export interface User extends Document {
   emailVerified: boolean;
   verifyToken: string;
   verifyTokenExpiry: Date;
-  role: string;
   college: string;
   gradYear: number;
   subscription: {
@@ -19,7 +18,6 @@ export interface User extends Document {
     expiresAt: string;
     paymentId: string;
   };
-  createdAt: string;
 }
 
 const userSchema: Schema<User> = new Schema(
@@ -70,7 +68,6 @@ const userSchema: Schema<User> = new Schema(
       expiresAt: Date,
       paymentId: String,
     },
-    createdAt: Date,
   },
   {
     timestamps: true,
