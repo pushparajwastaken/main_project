@@ -2,7 +2,7 @@ import { z } from "zod";
 import UserModel from "@/model/user.model";
 import dbConnect from "@/lib/dbConnect";
 
-export async function GET(request: Request) {
+export async function POSY(request: Request) {
   await dbConnect();
   try {
     const { username, code } = await request.json();

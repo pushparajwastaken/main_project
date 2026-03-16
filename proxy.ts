@@ -4,6 +4,9 @@ import { getToken } from "next-auth/jwt";
 export async function proxy(request: NextRequest) {
   const token = await getToken({ req: request });
   const url = request.nextUrl;
+  if (!token && url.pathname.startsWith("/dashboard")) {
+    return NextResponse.redirect(new URL("/signIn", request.url));
+  }
   if (
     token &&
     (url.pathname.startsWith("/signIn") ||

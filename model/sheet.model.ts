@@ -19,7 +19,7 @@ const sheetSchema: Schema<Sheet> = new Schema(
     slug: {
       type: String,
       required: true,
-      unqiue: true,
+      unique: true,
       lowercase: true,
     },
     description: {

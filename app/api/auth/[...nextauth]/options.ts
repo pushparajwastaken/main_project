@@ -21,7 +21,7 @@ export const authOptions: NextAuthOptions = {
         try {
           const user = await UserModel.findOne({
             $or: [
-              { email: credentials.identifier.email },
+              { email: credentials.identifier },
               {
                 username: credentials.identifier,
               },
@@ -34,7 +34,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error("User Not fond with thi email");
           }
           const isPasswordCorrect = await bcrypt.compare(
-            credentials.provider,
+            credentials.password,
             user.password,
           );
           if (isPasswordCorrect) {

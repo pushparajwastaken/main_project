@@ -6,12 +6,14 @@ declare module "next-auth" {
     _id?: string;
     emailVerified?: boolean;
     username?: string;
+    role?: string;
   }
   interface Session {
     user: {
       _id?: string;
       emailVerified?: boolean;
       username?: string;
+      role?: string;
     } & DefaultSession["user"]; //in default session there will always be a key named 'User'
   }
 }
@@ -20,5 +22,6 @@ declare module "next-auth/jwt" {
     _id?: string;
     emailVerified?: boolean;
     username?: string;
+    role?: string;
   }
 }

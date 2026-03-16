@@ -28,7 +28,9 @@ export async function GET(request: Request) {
     const result = usernameQuerySchema.safeParse(queryParama);
     console.log(result); //remove once you know the output
     if (!result.success) {
-      const usernameErrors = result.error.format().username?._errors || [];
+      const usernameErrors = result.error.issues
+        .filter((i) => i.path.includes("username"))
+        .map((i) => i.message);
       return Response.json(
         {
           success: false,

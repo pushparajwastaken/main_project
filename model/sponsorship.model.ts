@@ -21,7 +21,7 @@ const sponsorshipSchema = new Schema(
     currency: { type: String, default: "INR" },
     message: String,
     isAnon: { type: Boolean, default: false },
-    gateway: { type: String, enum: ["razorpay", "stripe", "bmac"] },
+    gateway: { type: String, enum: ["razorpay", "stripe"] },
     paymentId: String,
     paidAt: { type: Date, default: Date.now },
   },

@@ -46,7 +46,7 @@ const questionSchema: Schema<Question> = new Schema(
       type: Boolean,
       default: false,
     },
-    tags: { String },
+    tags: [String],
   },
   { timestamps: true },
 );

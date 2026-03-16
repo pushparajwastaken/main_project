@@ -13,7 +13,7 @@ export const signUpSchema = z.object({
     .max(50, "Name cannot be more than 50 characters")
     .regex(/^[a-zA-Z\s]+$/, "Name must only contain letters"),
   username: usernameValidation,
-  email: z.string().email({ message: "Invalid email address" }),
+  email: z.email({ message: "Invalid email address" }),
   password: z
     .string()
     .min(6, { message: "Password must be atleast 6 letters" })

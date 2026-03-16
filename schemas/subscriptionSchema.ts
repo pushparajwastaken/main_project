@@ -1,11 +1,7 @@
 import { z } from "zod";
 
 export const SUBSCRIPTION_PLANS = ["monthly", "quarterly", "annual"] as const;
-export const SUBSCRIPTION_STATUSES = [
-  "active",
-  "expired",
-  "cancelled",
-] as const;
+export const SUBSCRIPTION_STATUSES = ["Active", "Expired", "Free"] as const;
 export const PAYMENT_GATEWAYS = ["razorpay", "stripe", "bmac"] as const;
 
 export const subscriptionFormSchema = z.object({
@@ -17,7 +13,7 @@ export const subscriptionCreateSchema = z.object({
 
   plan: z.enum(SUBSCRIPTION_PLANS, { message: "Invalid plan" }),
 
-  status: z.enum(SUBSCRIPTION_STATUSES).default("active"),
+  status: z.enum(SUBSCRIPTION_STATUSES).default("Active"),
 
   amount: z.number().min(1, "Amount must be at least 1"),
 
