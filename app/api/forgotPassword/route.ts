@@ -3,7 +3,7 @@ import { sendResetEmail } from "@/helpers/sendResetEmail";
 import UserModel from "@/model/user.model";
 import dbConnect from "@/lib/dbConnect";
 import { randomBytes } from "crypto";
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   await dbConnect();
   try {
     const body = await request.json();
@@ -27,7 +27,7 @@ export async function GET(request: Request) {
     }
     const resetPasswordToken = randomBytes(32).toString("hex");
     const resetPasswordExpiry = new Date();
-    resetPasswordExpiry.setHours(Date.now() + 3600000);
+    resetPasswordExpiry.setHours(resetPasswordExpiry.getHours() + 1);
     User.resetPasswordToken = resetPasswordToken;
     User.resetPasswordExpiry = resetPasswordExpiry;
     await User.save();

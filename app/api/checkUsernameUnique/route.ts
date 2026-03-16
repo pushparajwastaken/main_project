@@ -26,7 +26,7 @@ export async function GET(request: Request) {
     };
     //validate with Zod
     const result = usernameQuerySchema.safeParse(queryParama);
-    console.log(result); //remove once you know the output
+
     if (!result.success) {
       const usernameErrors = result.error.issues
         .filter((i) => i.path.includes("username"))

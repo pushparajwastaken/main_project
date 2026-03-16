@@ -18,8 +18,8 @@ export interface User extends Document {
     expiresAt: string;
     paymentId: string;
   };
-  resetPasswordToken: string;
-  resetPasswordExpiry: Date;
+  resetPasswordToken?: string | undefined;
+  resetPasswordExpiry?: Date | undefined;
 }
 
 const userSchema: Schema<User> = new Schema(
@@ -70,8 +70,8 @@ const userSchema: Schema<User> = new Schema(
       expiresAt: Date,
       paymentId: String,
     },
-    resetPasswordToken: { type: String },
-    resetPasswordExpiry: { type: Date },
+    resetPasswordToken: { type: String, default: undefined },
+    resetPasswordExpiry: { type: Date, default: undefined },
   },
   {
     timestamps: true,
