@@ -1,8 +1,8 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface Topic extends Document {
-  sheetId: Schema.Types.ObjectId;
-  subjectId: Schema.Types.ObjectId;
+  sheetId: mongoose.Types.ObjectId;
+  subjectId: mongoose.Types.ObjectId;
   title: string;
   description: string;
   order: number;

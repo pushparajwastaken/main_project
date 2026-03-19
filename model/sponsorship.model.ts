@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface Sponsorship extends Document {
-  userId: Schema.Types.ObjectId;
+  userId: mongoose.Types.ObjectId;
   name: string;
   email: string;
   amount: number;

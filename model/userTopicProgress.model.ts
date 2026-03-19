@@ -2,13 +2,13 @@ import { Schema, Document } from "mongoose";
 import mongoose from "mongoose";
 
 export interface UserTopicProgress extends Document {
-  userId: Schema.Types.ObjectId;
-  topicId: Schema.Types.ObjectId;
-  sheetId: Schema.Types.ObjectId;
-  subjectId: Schema.Types.ObjectId;
+  userId: mongoose.Types.ObjectId;
+  topicId: mongoose.Types.ObjectId;
+  sheetId: mongoose.Types.ObjectId;
+  subjectId: mongoose.Types.ObjectId;
   isCompleted: boolean;
   completedAt: Date;
-  completedQuestions: [Schema.Types.ObjectId];
+  completedQuestions: [mongoose.Types.ObjectId];
   revisitCount: number;
 }
 const UserTopicProgressSchema: Schema<UserTopicProgress> = new Schema(

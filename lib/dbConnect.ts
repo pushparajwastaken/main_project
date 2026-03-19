@@ -1,12 +1,6 @@
 import mongoose from "mongoose";
-
-if (!process.env.MONGODB_URI) {
-  throw new Error("MONGODB_URI is not defined in .env");
-}
-
-const MONGODB_URI = process.env.MONGODB_URI;
-
-// Persists across hot reloads in development
+import dns from "node:dns/promises";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 declare global {
   var mongoose: {
     conn: mongoose.Connection | null;
@@ -18,6 +12,10 @@ let cached = global.mongoose || { conn: null, promise: null };
 global.mongoose = cached;
 
 async function dbConnect(): Promise<mongoose.Connection> {
+  if (!process.env.MONGODB_URI) {
+    throw new Error("MONGODB_URI is not defined in .env");
+  }
+  const MONGODB_URI = process.env.MONGODB_URI;
   if (cached.conn) {
     console.log("Already connected to the database");
     return cached.conn;

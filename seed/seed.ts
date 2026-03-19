@@ -1,6 +1,5 @@
-import { setDefaultResultOrder } from "node:dns";
-setDefaultResultOrder("ipv4first");
-
+require("dotenv").config({ path: ".env.local" });
+console.log("ENV:", process.env.MONGODB_URI);
 import mongoose from "mongoose";
 import data from "./dsa-sheet.json";
 
@@ -8,6 +7,7 @@ import SheetModel from "../model/sheet.model";
 import SubjectModel from "../model/subject.model";
 import topicModel from "../model/topic.model";
 import questionModel from "../model/question.model";
+import dbConnect from "../lib/dbConnect";
 
 async function cleanup() {
   console.log("🧹 Cleaning up existing data...");
@@ -19,15 +19,7 @@ async function cleanup() {
 }
 
 async function seed() {
-  // Connect directly — no dbConnect singleton
-  const MONGODB_URI = process.env.MONGODB_URI!;
-  if (!MONGODB_URI) throw new Error("MONGODB_URI is not defined");
-
-  await mongoose.connect(MONGODB_URI);
-  console.log("✅ Connected to MongoDB");
-
-  const isFresh = process.argv.includes("--fresh");
-  if (isFresh) await cleanup();
+  await dbConnect();
 
   const sheet = await SheetModel.create({
     title: data.title,
@@ -74,7 +66,7 @@ async function seed() {
           isPremium: false,
         })),
       );
-      console.log(`      ✅ Inserted ${topicData.questions.length} questions`);
+      console.log(`✅ Inserted ${topicData.questions.length} questions`);
 
       sheetTotalTopics++;
     }

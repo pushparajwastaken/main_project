@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document, mongo } from "mongoose";
 
 export interface Question extends Document {
-  topicId: Schema.Types.ObjectId;
+  topicId: mongoose.Types.ObjectId;
   title: string;
   type: String;
   url: string;

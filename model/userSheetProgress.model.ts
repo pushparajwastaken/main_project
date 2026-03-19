@@ -1,8 +1,8 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface UserSheetProgress extends Document {
-  userId: Schema.Types.ObjectId;
-  sheetId: Schema.Types.ObjectId;
+  userId: mongoose.Types.ObjectId;
+  sheetId: mongoose.Types.ObjectId;
   enrolledAt: Date;
   totalTopics: number;
   completedTopics: number;

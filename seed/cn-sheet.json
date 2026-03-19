@@ -1,0 +1,693 @@
+{
+  "sheet": {
+    "title": "Computer Networks",
+    "slug": "cn-gate-smashers",
+    "description": "Complete Computer Networks playlist by Gate Smashers — 95 lectures covering Physical Layer, Data Link Layer, Network Layer (IP addressing, routing), Transport Layer (TCP/UDP), Application Layer, and Network Security. Ideal for GATE, UGC NET, DSSSB, NIELIT, and placement interviews.",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 4
+  },
+  "subjects": [
+    {
+      "title": "Physical Layer",
+      "slug": "cn-physical-layer",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Basics & Transmission Media",
+          "description": "Introduction to CN, topologies, encoding, cables, LAN devices, switching techniques",
+          "order": 1,
+          "difficulty": "easy",
+          "questions": [
+            {
+              "title": "Lec 0 — Computer Networks & Security Full Syllabus (GATE, UGC NET)",
+              "url": "https://www.youtube.com/watch?v=JFF2vALvJoU&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=1",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 1 — Introduction to Computer Networks",
+              "url": "https://www.youtube.com/watch?v=k3NKcWBRs0c&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=2",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 1.1 — Physical Layer in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=oAZJbXSQces&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=3",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 1.2 — Topologies in Computer Networks | Part 1",
+              "url": "https://www.youtube.com/watch?v=sXKs_2dItLQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=4",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 1.2 — Topologies in Computer Networks | Part 2",
+              "url": "https://www.youtube.com/watch?v=wb4FoXVN4hM&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=5",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lec 1.3 — Manchester Encoding & Differential Manchester Encoding",
+              "url": "https://www.youtube.com/watch?v=KmSmCqfQmPo&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=6",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 1.4 — Various Devices in Computer Networks (Hardware & Software)",
+              "url": "https://www.youtube.com/watch?v=vCvkMGbAMSs&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=7",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Lec 1.5 — Types of Cables in CN | Coaxial, Twisted Pair, Fibre Optic",
+              "url": "https://www.youtube.com/watch?v=8BkDMiNBpfc&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Lec 1.6 — Repeaters in Computer Networks | Physical Layer Devices",
+              "url": "https://www.youtube.com/watch?v=hBmFiMaKUhA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=9",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Lec 1.7 — Hub in Computer Networks | Physical Layer Devices",
+              "url": "https://www.youtube.com/watch?v=LZVDhCMCMUs&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=10",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "Lec 1.8 — Bridges in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=4Zyrc-Avhu8&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=11",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            },
+            {
+              "title": "Lec 1.9 — Routers in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=m62VyMIGe-M&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=12",
+              "type": "video",
+              "platform": "youtube",
+              "order": 12
+            }
+          ]
+        },
+        {
+          "title": "Switching Techniques",
+          "description": "Circuit switching, packet switching, datagram vs virtual circuit, message switching",
+          "order": 2,
+          "difficulty": "easy",
+          "questions": [
+            {
+              "title": "Lec 1.10 — Circuit Switching in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=Fmuat78UaJI&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=13",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 1.11 — Packet Switching in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=1WZxm4SrQ84&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=14",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 1.12 — Datagram Switching vs Virtual Circuit Switching",
+              "url": "https://www.youtube.com/watch?v=5O7gnTyxAZA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=15",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 1.13 — Message Switching in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=qpgGjmCqhbA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=16",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Unicast, Broadcast & Multicast in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=6fJbdNMzHwM&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=17",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Data Link Layer",
+      "slug": "cn-data-link-layer",
+      "order": 2,
+      "topics": [
+        {
+          "title": "Flow Control & ARQ Protocols",
+          "description": "DLL responsibilities, Stop & Wait, Go-Back-N, Selective Repeat ARQ protocols",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Lec 2 — Data Link Layer & Its Responsibilities",
+              "url": "https://www.youtube.com/watch?v=21AKOIoFaXQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=18",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 2.1 — Stop & Wait, Go-Back-N & Selective Repeat | Flow Control Protocols",
+              "url": "https://www.youtube.com/watch?v=LnbossShL0Y&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=19",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 2.2 — Introduction to Error Detection & Correction",
+              "url": "https://www.youtube.com/watch?v=bN-qmj9YZOE&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=20",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 2.3 — Single Bit Parity & Hamming Distance | Error Control",
+              "url": "https://www.youtube.com/watch?v=i3znY7SfNpg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=21",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 2.4 — CRC (Cyclic Redundancy Check) for Error Detection & Correction",
+              "url": "https://www.youtube.com/watch?v=A9g6rTMblz4&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=22",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Hamming Code | Error Detection & Correction",
+              "url": "https://www.youtube.com/watch?v=BnGCRFECIhE&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=23",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            }
+          ]
+        },
+        {
+          "title": "MAC Protocols & Ethernet",
+          "description": "ALOHA, CSMA/CD, CSMA/CA, Token Ring, Ethernet frame format, LAN technologies",
+          "order": 2,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Lec 2.5 — Medium Access Control (MAC) Protocols in DLL",
+              "url": "https://www.youtube.com/watch?v=FBUuBSvSDmY&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=24",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 2.6 — Pure ALOHA | MAC Layer Protocol",
+              "url": "https://www.youtube.com/watch?v=ADMiJKYV9SQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=25",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 2.7 — Pure ALOHA vs Slotted ALOHA",
+              "url": "https://www.youtube.com/watch?v=8XmMuXHO1uI&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=26",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 2.8 — CSMA (Carrier Sense Multiple Access)",
+              "url": "https://www.youtube.com/watch?v=VJFMFJWHITg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=27",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 2.9 — CSMA/CD (Collision Detection)",
+              "url": "https://www.youtube.com/watch?v=iKn0GzF5-IU&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=28",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "CSMA/CA (Collision Avoidance) in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=JUhzNPZBfNg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=29",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 2.10 — Numerical Questions on CSMA/CD",
+              "url": "https://www.youtube.com/watch?v=ZvjPhB0HLOQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=30",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Lec 2.11 — Ethernet Frame Format (IEEE 802.3)",
+              "url": "https://www.youtube.com/watch?v=gX-YcSFpQE0&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=31",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "LAN, MAN, WAN, PAN, CAN | Types of Networks",
+              "url": "https://www.youtube.com/watch?v=4_zSIXb7tLQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=32",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Bandwidth vs Throughput vs Latency",
+              "url": "https://www.youtube.com/watch?v=6izoo9-YBNI&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=33",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "Fast Ethernet vs Gigabit Ethernet with Examples",
+              "url": "https://www.youtube.com/watch?v=ZkCM3ygHHLQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=34",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Network Layer",
+      "slug": "cn-network-layer",
+      "order": 3,
+      "topics": [
+        {
+          "title": "IP Addressing & Subnetting",
+          "description": "Network layer responsibilities, classful addressing (A/B/C/D/E), CIDR, subnetting, VLSM",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Lec 3 — Network Layer & Its Responsibilities | OSI Model",
+              "url": "https://www.youtube.com/watch?v=1xB6xnPCx3c&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=35",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 3.1 — Class A IP Addressing with Examples | Classful Addressing",
+              "url": "https://www.youtube.com/watch?v=GCw3qJCNpBg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=36",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 3.2 — Class B IP Addressing with Examples",
+              "url": "https://www.youtube.com/watch?v=hbWEK9LGJRI&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=37",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 3.3 — Class C IP Addressing with Examples",
+              "url": "https://www.youtube.com/watch?v=lkMDgqfHCsw&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=38",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 3.4 — Class D & Class E IP Addressing",
+              "url": "https://www.youtube.com/watch?v=JWL3Gq1O_DY&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=39",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lec 3.5 — Find Range, Network ID, Host, Broadcast Address | Numericals",
+              "url": "https://www.youtube.com/watch?v=HG-bPrOqtFM&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=40",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 3.6 — Disadvantages of Classful Addressing",
+              "url": "https://www.youtube.com/watch?v=eBBvhDNIV7k&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=41",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Lec 3.7 — Classless Addressing (CIDR) | CIDR vs Classful Addressing",
+              "url": "https://www.youtube.com/watch?v=IOGnrOJpUqU&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=42",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Lec 3.8 — Subnetting in Classful Addressing with Examples",
+              "url": "https://www.youtube.com/watch?v=HdUkXMRcfj8&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=43",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Lec 3.9 — VLSM (Variable Length Subnet Masking)",
+              "url": "https://www.youtube.com/watch?v=1PgGBzn0Vmk&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=44",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "IPv4 vs IPv6 | Differences & Features",
+              "url": "https://www.youtube.com/watch?v=GfVRMQvMNLg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=45",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            }
+          ]
+        },
+        {
+          "title": "Routing Algorithms",
+          "description": "Distance vector, link state, Dijkstra, Bellman-Ford, RIP, OSPF, BGP, congestion control",
+          "order": 2,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Lec 4 — Routing Algorithms in Computer Networks | Introduction",
+              "url": "https://www.youtube.com/watch?v=y1cZRQdcFsk&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=46",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 4.1 — Distance Vector Routing Algorithm",
+              "url": "https://www.youtube.com/watch?v=x9WIQbaVPNU&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=47",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 4.2 — Count to Infinity Problem in Distance Vector Routing",
+              "url": "https://www.youtube.com/watch?v=8_HFGhYBKQA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=48",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 4.3 — Link State Routing Algorithm | Dijkstra's Algorithm",
+              "url": "https://www.youtube.com/watch?v=HqBODo9HNys&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=49",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 4.4 — RIP (Routing Information Protocol)",
+              "url": "https://www.youtube.com/watch?v=n3oMXSPKNiw&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=50",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lec 4.5 — OSPF (Open Shortest Path First) Protocol",
+              "url": "https://www.youtube.com/watch?v=3Bk_n9mjJPk&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=51",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 4.6 — BGP (Border Gateway Protocol)",
+              "url": "https://www.youtube.com/watch?v=3Bk_n9mjJPk&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=52",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Lec 4.7 — Congestion Control in Network Layer",
+              "url": "https://www.youtube.com/watch?v=7cqLYpEEMo8&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=53",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "ARP & RARP in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=5cB8S0W0qJM&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=54",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "NAT (Network Address Translation)",
+              "url": "https://www.youtube.com/watch?v=wg8Hosr20yw&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=55",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "ICMP (Internet Control Message Protocol)",
+              "url": "https://www.youtube.com/watch?v=PIiGnQPSKEg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=56",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Transport Layer",
+      "slug": "cn-transport-layer",
+      "order": 4,
+      "topics": [
+        {
+          "title": "TCP & UDP",
+          "description": "Transport layer responsibilities, TCP vs UDP, TCP connection (3-way handshake), flow control, congestion control",
+          "order": 1,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Lec 5 — Transport Layer & Its Responsibilities",
+              "url": "https://www.youtube.com/watch?v=xdQ9sgpkHBM&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=57",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 5.1 — TCP vs UDP | Differences with Examples",
+              "url": "https://www.youtube.com/watch?v=cA9ZJdqzOoU&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=58",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 5.2 — TCP 3-Way Handshake (Connection Establishment)",
+              "url": "https://www.youtube.com/watch?v=LyDqA-dAPW4&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=59",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 5.3 — TCP Header Format",
+              "url": "https://www.youtube.com/watch?v=HCHFX5O1IaQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=60",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 5.4 — Flow Control in TCP | Sliding Window Protocol",
+              "url": "https://www.youtube.com/watch?v=OERqQkMW-Ko&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=61",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lec 5.5 — Congestion Control in TCP | Slow Start, Congestion Avoidance",
+              "url": "https://www.youtube.com/watch?v=H5M9GgrMfHg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=62",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 5.6 — Ports in Computer Networks | Well-Known Ports",
+              "url": "https://www.youtube.com/watch?v=g2fT-g9PX9o&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=63",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Socket Programming in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=zG_T57bYpAQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=64",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Application Layer",
+      "slug": "cn-application-layer",
+      "order": 5,
+      "topics": [
+        {
+          "title": "Application Layer Protocols",
+          "description": "DNS, HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DHCP, SSH, SNMP",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Lec 6 — Application Layer & Its Protocols",
+              "url": "https://www.youtube.com/watch?v=JdaeyjJN5JA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=65",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 6.1 — DNS (Domain Name System) in Computer Networks",
+              "url": "https://www.youtube.com/watch?v=7W8t6vbMJp0&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=66",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 6.2 — HTTP & HTTPS | How Web Works",
+              "url": "https://www.youtube.com/watch?v=HKNRfl86CsA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=67",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 6.3 — FTP (File Transfer Protocol)",
+              "url": "https://www.youtube.com/watch?v=O00ENOfrP7w&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=68",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 6.4 — SMTP, POP3 & IMAP | Email Protocols",
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=69",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lec 6.5 — DHCP (Dynamic Host Configuration Protocol)",
+              "url": "https://www.youtube.com/watch?v=wjGqPqQ-GZk&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=70",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 6.6 — SNMP (Simple Network Management Protocol)",
+              "url": "https://www.youtube.com/watch?v=vkxpEzBrpwE&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=71",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Linux Network Commands | ifconfig, ping, traceroute, netstat",
+              "url": "https://www.youtube.com/watch?v=OqzBaeCHRgY&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=72",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Network Security",
+      "slug": "cn-network-security",
+      "order": 6,
+      "topics": [
+        {
+          "title": "Cryptography & Security",
+          "description": "Symmetric & asymmetric encryption, DES, AES, RSA, digital signatures, SSL/TLS, firewalls, VPN",
+          "order": 1,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Lec 7 — Network Security | Introduction to Cryptography",
+              "url": "https://www.youtube.com/watch?v=TLgaMApabWw&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=73",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lec 7.1 — Symmetric Key Cryptography | DES, AES",
+              "url": "https://www.youtube.com/watch?v=W24Yt5E5o_M&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=74",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lec 7.2 — Asymmetric Key Cryptography | RSA Algorithm",
+              "url": "https://www.youtube.com/watch?v=Py7bHSgLU2E&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=75",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lec 7.3 — Digital Signatures & Certificates",
+              "url": "https://www.youtube.com/watch?v=9Ky3kgTpMhA&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=76",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lec 7.4 — SSL/TLS Protocol | HTTPS Working",
+              "url": "https://www.youtube.com/watch?v=AlE5X1NlHgg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=77",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lec 7.5 — Firewall in Computer Networks | Types of Firewalls",
+              "url": "https://www.youtube.com/watch?v=bDX0sqdEBkc&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=78",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lec 7.6 — VPN (Virtual Private Network)",
+              "url": "https://www.youtube.com/watch?v=eKgAbHOvLiQ&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=79",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Lec 7.7 — Network Attacks | DoS, DDoS, MITM, Phishing",
+              "url": "https://www.youtube.com/watch?v=mOQ3YsOgHSg&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=80",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "GATE PYQ on Computer Networks | Previous Year Questions",
+              "url": "https://www.youtube.com/watch?v=UNmJ-2NQKQM&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_&index=81",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

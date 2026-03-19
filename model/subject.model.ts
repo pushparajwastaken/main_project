@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface Subject extends Document {
-  sheetId: Schema.Types.ObjectId;
+  sheetId: mongoose.Types.ObjectId;
   title: string;
   slug: string;
   order: number;

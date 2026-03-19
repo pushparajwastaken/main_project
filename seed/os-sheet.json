@@ -1,0 +1,658 @@
+{
+  "sheet": {
+    "title": "Operating Systems",
+    "slug": "os-gate-smashers",
+    "description": "Complete Operating System playlist by Gate Smashers — covers Introduction, Process Management, CPU Scheduling, Synchronization, Deadlock, Memory Management, Disk Scheduling, and File Systems. Ideal for GATE, placements, and university exams.",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 2
+  },
+  "subjects": [
+    {
+      "title": "Introduction to OS",
+      "slug": "os-introduction",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Introduction to OS",
+          "description": "Basics of Operating Systems, types, and functions",
+          "order": 1,
+          "difficulty": "easy",
+          "questions": [
+            {
+              "title": "OS Syllabus Discussion",
+              "url": "https://www.youtube.com/watch?v=z9q3l5_3O7U&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=1",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Introduction to Operating System and its Functions",
+              "url": "https://www.youtube.com/watch?v=RozoeWzT7IM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=2",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Multiprogramming and Multitasking OS",
+              "url": "https://www.youtube.com/watch?v=3ObNPFGnM_s&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=3",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Types of Operating Systems (Batch, Real-Time, Distributed)",
+              "url": "https://www.youtube.com/watch?v=Kf6nFAkdmLk&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=4",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Process Management",
+      "slug": "os-process-management",
+      "order": 2,
+      "topics": [
+        {
+          "title": "Process & Threads",
+          "description": "Process states, PCB, system calls, fork, threads",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Process States in Operating System",
+              "url": "https://www.youtube.com/watch?v=jMs4OBm5M8U&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=5",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "System Calls in OS and its Types",
+              "url": "https://www.youtube.com/watch?v=IgnODjFkP_c&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=6",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Fork System Call with Example",
+              "url": "https://www.youtube.com/watch?v=tcYo6hipaSA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=7",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Questions on Fork System Call",
+              "url": "https://www.youtube.com/watch?v=bCNK9FRfLho&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Process vs Threads in OS",
+              "url": "https://www.youtube.com/watch?v=O3EyzlZxx3g&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=9",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "User Level vs Kernel Level Threads",
+              "url": "https://www.youtube.com/watch?v=_KrvMJ3ZCCY&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=10",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "User Mode and Kernel Mode in OS",
+              "url": "https://www.youtube.com/watch?v=sFrSQBPtpqk&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=11",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CPU Scheduling",
+      "slug": "os-cpu-scheduling",
+      "order": 3,
+      "topics": [
+        {
+          "title": "Scheduling Algorithms",
+          "description": "FCFS, SJF, SRTF, Round Robin, Priority, Multilevel Queue",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Process Scheduling Algorithms — Introduction",
+              "url": "https://www.youtube.com/watch?v=EWkQl0n0w5M&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=12",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Arrival Time, Burst Time, Completion Time, TAT, WT, RT — Definitions",
+              "url": "https://www.youtube.com/watch?v=ql2L7JmAdQk&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=13",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "First Come First Serve (FCFS) Scheduling",
+              "url": "https://www.youtube.com/watch?v=PPDocKmbBwQ&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=14",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Shortest Job First (SJF) Scheduling",
+              "url": "https://www.youtube.com/watch?v=t0g9b3SJECg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=15",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Shortest Remaining Time First (SRTF) Scheduling",
+              "url": "https://www.youtube.com/watch?v=dFcNfWm-zZA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=16",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Round Robin Scheduling",
+              "url": "https://www.youtube.com/watch?v=TxjIlNYRZ5M&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=17",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Pre-emptive Priority Scheduling Algorithm",
+              "url": "https://www.youtube.com/watch?v=aqMNMpJEwZg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=18",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Non Pre-emptive Priority Scheduling",
+              "url": "https://www.youtube.com/watch?v=SaHaifEgFx0&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=19",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Multilevel Queue Scheduling",
+              "url": "https://www.youtube.com/watch?v=kKQaDuynRco&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=20",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Multilevel Feedback Queue Scheduling",
+              "url": "https://www.youtube.com/watch?v=QEX6ELeSBWQ&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=21",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "GATE PYQ on CPU Scheduling",
+              "url": "https://www.youtube.com/watch?v=G1MWJVHXP9Y&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=22",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Process Synchronization",
+      "slug": "os-synchronization",
+      "order": 4,
+      "topics": [
+        {
+          "title": "Critical Section & Mutex",
+          "description": "Race conditions, critical section problem, mutex, semaphores",
+          "order": 1,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Introduction to Process Synchronization",
+              "url": "https://www.youtube.com/watch?v=ph2awKa8r5Y&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=23",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Critical Section Problem",
+              "url": "https://www.youtube.com/watch?v=eKKc0d7Ozmk&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=24",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Peterson's Solution",
+              "url": "https://www.youtube.com/watch?v=FQ5J04e-sPE&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=25",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Mutex vs Semaphore",
+              "url": "https://www.youtube.com/watch?v=cacpSBPyRSE&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=26",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Counting Semaphore",
+              "url": "https://www.youtube.com/watch?v=aFHGEkFUCNs&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=27",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Producer Consumer Problem",
+              "url": "https://www.youtube.com/watch?v=Qx3P2wazwI0&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=28",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Reader Writer Problem",
+              "url": "https://www.youtube.com/watch?v=jBlkbU_5ouM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=29",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Dining Philosopher Problem",
+              "url": "https://www.youtube.com/watch?v=_pVobdDzAKM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=30",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Monitor in OS",
+              "url": "https://www.youtube.com/watch?v=MrOYGN7E8aQ&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=31",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Deadlock",
+      "slug": "os-deadlock",
+      "order": 5,
+      "topics": [
+        {
+          "title": "Deadlock Handling",
+          "description": "Deadlock conditions, prevention, avoidance, detection, recovery",
+          "order": 1,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Introduction to Deadlock",
+              "url": "https://www.youtube.com/watch?v=onkWXaXAgbY&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=32",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Four Necessary Conditions for Deadlock",
+              "url": "https://www.youtube.com/watch?v=UVo9mGARkhQ&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=33",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Resource Allocation Graph (RAG)",
+              "url": "https://www.youtube.com/watch?v=ap69ERUMKgI&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=34",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Deadlock Prevention",
+              "url": "https://www.youtube.com/watch?v=HNs6xL5gWbk&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=35",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Deadlock Avoidance — Banker's Algorithm",
+              "url": "https://www.youtube.com/watch?v=2V2FfP_olaA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=36",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Banker's Algorithm Numerical",
+              "url": "https://www.youtube.com/watch?v=TtFJH5MsMcI&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=37",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Deadlock Detection and Recovery",
+              "url": "https://www.youtube.com/watch?v=gGkSzCVKGLg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=38",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "GATE PYQ on Deadlock",
+              "url": "https://www.youtube.com/watch?v=knEJ1rJt2hM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=39",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Memory Management",
+      "slug": "os-memory-management",
+      "order": 6,
+      "topics": [
+        {
+          "title": "Memory Allocation & Paging",
+          "description": "Contiguous allocation, paging, segmentation, fragmentation",
+          "order": 1,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Introduction to Memory Management",
+              "url": "https://www.youtube.com/watch?v=JQfL0J5pwIM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=40",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Fixed vs Dynamic Partitioning",
+              "url": "https://www.youtube.com/watch?v=evQbV0gWQiM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=41",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Internal and External Fragmentation",
+              "url": "https://www.youtube.com/watch?v=1X9sFjEiuQM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=42",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Paging in OS",
+              "url": "https://www.youtube.com/watch?v=0CSpMvlM1b4&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=43",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Paging Numerical — Address Translation",
+              "url": "https://www.youtube.com/watch?v=RjNLOGKjFo0&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=44",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Multilevel Paging",
+              "url": "https://www.youtube.com/watch?v=Cj3BkbimcDA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=45",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Translation Lookaside Buffer (TLB)",
+              "url": "https://www.youtube.com/watch?v=AGx2mT-c0oo&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=46",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Segmentation in OS",
+              "url": "https://www.youtube.com/watch?v=LlQm_yCnEQ8&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=47",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            }
+          ]
+        },
+        {
+          "title": "Virtual Memory & Page Replacement",
+          "description": "Virtual memory, demand paging, page faults, page replacement algorithms",
+          "order": 2,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Virtual Memory in OS",
+              "url": "https://www.youtube.com/watch?v=o2_iCzS9-ZQ&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=48",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Demand Paging and Page Fault",
+              "url": "https://www.youtube.com/watch?v=pvh4zRBR_Jc&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=49",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Page Replacement Algorithms — Introduction",
+              "url": "https://www.youtube.com/watch?v=RnMONNLxbDg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=50",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "FIFO Page Replacement Algorithm",
+              "url": "https://www.youtube.com/watch?v=IkxhZu2qpiA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=51",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Optimal Page Replacement Algorithm",
+              "url": "https://www.youtube.com/watch?v=ytLBm3nOi8s&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=52",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "LRU Page Replacement Algorithm",
+              "url": "https://www.youtube.com/watch?v=IEH8n3xmE2U&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=53",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "LFU and MFU Page Replacement",
+              "url": "https://www.youtube.com/watch?v=k_O3oMNXvyE&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=54",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Belady's Anomaly",
+              "url": "https://www.youtube.com/watch?v=OOOX-sqHAqo&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=55",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Thrashing in OS",
+              "url": "https://www.youtube.com/watch?v=MpPfG-8MSig&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=56",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "GATE PYQ on Memory Management",
+              "url": "https://www.youtube.com/watch?v=p4KQnqKqLY0&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=57",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Disk Scheduling",
+      "slug": "os-disk-scheduling",
+      "order": 7,
+      "topics": [
+        {
+          "title": "Disk Scheduling Algorithms",
+          "description": "Disk structure, FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Disk Structure and Architecture",
+              "url": "https://www.youtube.com/watch?v=A5UrMdFEDQg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=58",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Disk Scheduling Algorithms — Introduction",
+              "url": "https://www.youtube.com/watch?v=A5UrMdFEDQg&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=59",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "FCFS Disk Scheduling",
+              "url": "https://www.youtube.com/watch?v=b0qBDjWqO3Q&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=60",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "SSTF Disk Scheduling",
+              "url": "https://www.youtube.com/watch?v=g1oD7PzSZGw&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=61",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "SCAN Disk Scheduling (Elevator Algorithm)",
+              "url": "https://www.youtube.com/watch?v=qSdIEz_GxMw&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=62",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "C-SCAN Disk Scheduling",
+              "url": "https://www.youtube.com/watch?v=eBkWo9PvX1E&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=63",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "LOOK Disk Scheduling",
+              "url": "https://www.youtube.com/watch?v=0c5JvRFknmA&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=64",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "C-LOOK Disk Scheduling",
+              "url": "https://www.youtube.com/watch?v=5gKAMWmqcjE&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=65",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Important Questions on OS | NTA NET",
+              "url": "https://www.youtube.com/watch?v=D8z8Oi_9nEw&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=66",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "File System",
+      "slug": "os-file-system",
+      "order": 8,
+      "topics": [
+        {
+          "title": "File System & Allocation",
+          "description": "File system structure, file attributes, contiguous, linked, indexed allocation, Unix Inode",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "File System in OS — Windows, Linux, Unix, Android",
+              "url": "https://www.youtube.com/watch?v=Wk4AQLH70Vk&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=67",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "File Attributes and Operations",
+              "url": "https://www.youtube.com/watch?v=RciFnTgS4iY&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=68",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Contiguous vs Non-Contiguous Allocation",
+              "url": "https://www.youtube.com/watch?v=dJP4NzKHEQ4&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=69",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Contiguous Allocation — Advantages and Disadvantages",
+              "url": "https://www.youtube.com/watch?v=3blL7d2Q_oQ&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=70",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Linked List File Allocation",
+              "url": "https://www.youtube.com/watch?v=BFa9gMETHQM&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=71",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Indexed File Allocation",
+              "url": "https://www.youtube.com/watch?v=o9RRFVf3xn4&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=72",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Unix Inode Structure with Numerical",
+              "url": "https://www.youtube.com/watch?v=PVtAaD5YuNY&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=73",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Protection and Security in OS",
+              "url": "https://www.youtube.com/watch?v=cQ6YuRkVquc&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p&index=74",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
