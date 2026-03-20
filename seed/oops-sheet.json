@@ -1,0 +1,76 @@
+{
+  "sheet": {
+    "title": "Object Oriented Programming",
+    "slug": "oops-java",
+    "description": "Complete Object Oriented Programming series in Java.",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 7
+  },
+  "subjects": [
+    {
+      "title": "Object Oriented Programming",
+      "slug": "oops-java-series",
+      "order": 1,
+      "topics": [
+        {
+          "title": "OOPs in Java",
+          "description": "Complete OOPs series in Java",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "OOP 1 | Introduction & Concepts - Classes, Objects, Constructors, Keywords",
+              "url": "https://www.youtube.com/watch?v=BSVKUk58K6U",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "OOP 2 | Packages, Static, Singleton Class, In-built Methods",
+              "url": "https://www.youtube.com/watch?v=_Ya6CN13t8k",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "OOP 3 | Principles - Inheritance, Polymorphism, Encapsulation, Abstraction",
+              "url": "https://www.youtube.com/watch?v=46T2wD3IuhM",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "OOP 4 | Access Control, In-built Packages, Object Class",
+              "url": "https://www.youtube.com/watch?v=W145DXs8fFg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "OOP 5 | Abstract Classes, Interfaces, Annotations",
+              "url": "https://www.youtube.com/watch?v=rgHZa7-Dibg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "OOP 6 | Generics, Custom ArrayList, Lambda Expressions, Exception Handling, Object Cloning",
+              "url": "https://www.youtube.com/watch?v=OY2lPr8h93U",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "OOP 7 | Collections Framework, Vector Class, Enums in Java",
+              "url": "https://www.youtube.com/watch?v=9ogGan-R1pc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
