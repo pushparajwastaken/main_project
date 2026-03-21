@@ -1,0 +1,307 @@
+{
+  "sheet": {
+    "title": "System Design & LLD",
+    "slug": "system-design-lld",
+    "description": "Complete Low Level Design and System Design series with OOPs, Design Patterns and real-world projects.",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 8
+  },
+  "subjects": [
+    {
+      "title": "System Design & LLD",
+      "slug": "system-design-lld-series",
+      "order": 1,
+      "topics": [
+        {
+          "title": "System Design & LLD Series",
+          "description": "Complete LLD and System Design series with design patterns and real-world projects",
+          "order": 1,
+          "difficulty": "hard",
+          "questions": [
+            {
+              "title": "Introduction To System Design",
+              "url": "https://www.youtube.com/watch?v=AK0hu0Zxua4",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "OOPs Real-World Examples | OOPs Pillars | Abstraction | Encapsulation",
+              "url": "https://www.youtube.com/watch?v=QbGoqAgP_zg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Inheritance & Polymorphism in OOPs",
+              "url": "https://www.youtube.com/watch?v=KGOEK0-XBIg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "What is UML Diagrams | Class & Sequence Diagrams with Real Examples",
+              "url": "https://www.youtube.com/watch?v=nPJyyO9pb5s",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "SOLID Design Principles | Complete Guide with Code Examples",
+              "url": "https://www.youtube.com/watch?v=UsNl8kcU4UA",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "SOLID Design Principles | part 2",
+              "url": "https://www.youtube.com/watch?v=hU9koy6A2I0",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Build Google Docs | A Real-World LLD Project | Document Editor LLD",
+              "url": "https://www.youtube.com/watch?v=MT9qZFGQXOU",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Strategy Design Pattern Explained with Real-World Example | Design Patterns in LLD",
+              "url": "https://www.youtube.com/watch?v=PpKvPrl_gRg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Factory Design Pattern | Simple, Factory Method & Abstract Factory with Real-Life Examples",
+              "url": "https://www.youtube.com/watch?v=dMK4TbG29fk",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Singleton Design Pattern | Thread-Safe, Lazy & Eager Initialization + Real Use Cases",
+              "url": "https://www.youtube.com/watch?v=CD3meit-WDc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "Build Zomato Food Delivery App | System Design",
+              "url": "https://www.youtube.com/watch?v=2SAUqTn3TrU",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            },
+            {
+              "title": "Observer Design Pattern Explained | Real-Life Use Case + Code Example",
+              "url": "https://www.youtube.com/watch?v=Jpmp4GY8r3Q",
+              "type": "video",
+              "platform": "youtube",
+              "order": 12
+            },
+            {
+              "title": "Decorator Pattern Explained | Real-world use case + Code | Design patterns in LLD",
+              "url": "https://www.youtube.com/watch?v=Z9rFlZClYNI",
+              "type": "video",
+              "platform": "youtube",
+              "order": 13
+            },
+            {
+              "title": "Build Your Own Notification Engine | System Design",
+              "url": "https://www.youtube.com/watch?v=t-4r2AsJz_Q",
+              "type": "video",
+              "platform": "youtube",
+              "order": 14
+            },
+            {
+              "title": "Command Design Pattern | Real-world use case + Code | Design patterns in LLD",
+              "url": "https://www.youtube.com/watch?v=cnQZsN0jxEY",
+              "type": "video",
+              "platform": "youtube",
+              "order": 15
+            },
+            {
+              "title": "Adapter Design Pattern | Real-world use case + Code | Design patterns in LLD",
+              "url": "https://www.youtube.com/watch?v=FV3x69rpwm0",
+              "type": "video",
+              "platform": "youtube",
+              "order": 16
+            },
+            {
+              "title": "Facade Design Pattern | Real-world use case + Code | Design patterns in LLD",
+              "url": "https://www.youtube.com/watch?v=0KlnSdvsojc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 17
+            },
+            {
+              "title": "Build Spotify, Music Player App | System Design",
+              "url": "https://www.youtube.com/watch?v=DkLwFqbCsu8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 18
+            },
+            {
+              "title": "Composite Design Pattern | Build File System (UML & Code) | System Design",
+              "url": "https://www.youtube.com/watch?v=xaaiMGmyDJk",
+              "type": "video",
+              "platform": "youtube",
+              "order": 19
+            },
+            {
+              "title": "Template Method Pattern | Step-by-Step Example (UML + Code)",
+              "url": "https://www.youtube.com/watch?v=8-vE_bmEt18",
+              "type": "video",
+              "platform": "youtube",
+              "order": 20
+            },
+            {
+              "title": "Proxy Design Pattern | Virtual Proxy | Protection Proxy | Remote Proxy",
+              "url": "https://www.youtube.com/watch?v=xuT6OOYVJTQ",
+              "type": "video",
+              "platform": "youtube",
+              "order": 21
+            },
+            {
+              "title": "Chain of Responsibility Pattern | Build Cash Dispenser (UML & Code) | System Design",
+              "url": "https://www.youtube.com/watch?v=LXVKB6deQMo",
+              "type": "video",
+              "platform": "youtube",
+              "order": 22
+            },
+            {
+              "title": "Build Payment Gateway System | System Design",
+              "url": "https://www.youtube.com/watch?v=36FDqIRBGRg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 23
+            },
+            {
+              "title": "Build Discount Coupon Engine | System Design",
+              "url": "https://www.youtube.com/watch?v=jbVevoGN_pM",
+              "type": "video",
+              "platform": "youtube",
+              "order": 24
+            },
+            {
+              "title": "Bridge Pattern | Real-world use case + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=KVf8dwgTbiM",
+              "type": "video",
+              "platform": "youtube",
+              "order": 25
+            },
+            {
+              "title": "Build Zepto | 10-Mins Quick Commerce | Inventory Management | System Design",
+              "url": "https://www.youtube.com/watch?v=FcbsppIX0bg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 26
+            },
+            {
+              "title": "Build Tinder | Dating Site | System Design",
+              "url": "https://www.youtube.com/watch?v=IcgLSo6--ok",
+              "type": "video",
+              "platform": "youtube",
+              "order": 27
+            },
+            {
+              "title": "Builder Design Pattern | Classic Builder | Step Builder | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=G4Ntl9KzIxY",
+              "type": "video",
+              "platform": "youtube",
+              "order": 28
+            },
+            {
+              "title": "Iterator Design Pattern | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=30fveBRLqMw",
+              "type": "video",
+              "platform": "youtube",
+              "order": 29
+            },
+            {
+              "title": "Flyweight Design Pattern | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=vNSRcegCO8E",
+              "type": "video",
+              "platform": "youtube",
+              "order": 30
+            },
+            {
+              "title": "Build Splitwise Clone | Expense Splitting App | System Design",
+              "url": "https://www.youtube.com/watch?v=cWtBZUAQpcc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 31
+            },
+            {
+              "title": "State Design Pattern | Build Vending Machine (UML & Code) | System Design",
+              "url": "https://www.youtube.com/watch?v=bJPmvie_p4w",
+              "type": "video",
+              "platform": "youtube",
+              "order": 32
+            },
+            {
+              "title": "Build Tic Tac Toe Game | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=BGFzYjGtRP4",
+              "type": "video",
+              "platform": "youtube",
+              "order": 33
+            },
+            {
+              "title": "Build Snake and Ladder Game | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=1NJB54UB8nE",
+              "type": "video",
+              "platform": "youtube",
+              "order": 34
+            },
+            {
+              "title": "Mediator Design Pattern | Build Chat Room | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=3lGIICzgyQQ",
+              "type": "video",
+              "platform": "youtube",
+              "order": 35
+            },
+            {
+              "title": "Prototype Design Pattern | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=KMQFNV8LFec",
+              "type": "video",
+              "platform": "youtube",
+              "order": 36
+            },
+            {
+              "title": "Build Chess Game | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=eULHvaMZUks",
+              "type": "video",
+              "platform": "youtube",
+              "order": 37
+            },
+            {
+              "title": "Visitor Design Pattern | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=DnmsxnlCyl0",
+              "type": "video",
+              "platform": "youtube",
+              "order": 38
+            },
+            {
+              "title": "Memento Design Pattern | UML + Code | System Design",
+              "url": "https://www.youtube.com/watch?v=p8-ile_nWnY",
+              "type": "video",
+              "platform": "youtube",
+              "order": 39
+            },
+            {
+              "title": "Null Object Pattern | Anti-Patterns in System Design",
+              "url": "https://www.youtube.com/watch?v=iXHlc_S3Ae4",
+              "type": "video",
+              "platform": "youtube",
+              "order": 40
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
