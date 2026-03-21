@@ -1,16 +1,17 @@
-import mongoose, { Schema, Document, mongo } from "mongoose";
+import mongoose, { Schema, Document } from "mongoose";
 
 export interface Question extends Document {
   topicId: mongoose.Types.ObjectId;
   title: string;
-  type: String;
+  type: string;
   url: string;
-  difficulty: string;
-  platform: string;
+  difficulty?: string;
+  platform?: string;
   order: number;
   isPremium: boolean;
-  tags: [String];
+  tags: string[];
 }
+
 const questionSchema: Schema<Question> = new Schema(
   {
     topicId: {
@@ -46,7 +47,10 @@ const questionSchema: Schema<Question> = new Schema(
       type: Boolean,
       default: false,
     },
-    tags: [String],
+    tags: {
+      type: [String],
+      default: [],
+    },
   },
   { timestamps: true },
 );
@@ -54,4 +58,5 @@ const questionSchema: Schema<Question> = new Schema(
 const questionModel =
   (mongoose.models.Question as mongoose.Model<Question>) ||
   mongoose.model<Question>("Question", questionSchema);
+
 export default questionModel;
