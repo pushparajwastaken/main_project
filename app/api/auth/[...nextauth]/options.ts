@@ -26,12 +26,12 @@ export const authOptions: NextAuthOptions = {
                 username: credentials.identifier,
               },
             ],
-          });
+          }).select("+password");
           if (!user) {
-            throw new Error("User Not fond with thi email");
+            throw new Error("No user found with this email or username");
           }
           if (!user.emailVerified) {
-            throw new Error("User Not fond with thi email");
+            throw new Error("Please verify your email first");
           }
           const isPasswordCorrect = await bcrypt.compare(
             credentials.password,
@@ -43,7 +43,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error("Incorrect Password");
           }
         } catch (error: any) {
-          throw new Error(error);
+          throw new Error(error.message);
         }
       },
     }),
