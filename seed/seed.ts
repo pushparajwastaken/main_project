@@ -1,7 +1,6 @@
 require("dotenv").config({ path: ".env.local" });
-console.log("ENV:", process.env.MONGODB_URI);
 import mongoose from "mongoose";
-import data from "./dsa-sheet.json";
+import data from "./cpp-sheet.json";
 
 import SheetModel from "../model/sheet.model";
 import SubjectModel from "../model/subject.model";
@@ -22,10 +21,10 @@ async function seed() {
   await dbConnect();
 
   const sheet = await SheetModel.create({
-    title: data.title,
-    slug: data.slug,
-    description: data.description,
-    isPremium: data.isPremium,
+    title: data.sheet.title,
+    slug: data.sheet.slug,
+    description: data.sheet.description,
+    isPremium: data.sheet.isPremium,
     isPublished: true,
     totalTopics: 0,
   });
@@ -58,7 +57,6 @@ async function seed() {
         topicData.questions.map((q) => ({
           title: q.title,
           url: q.url,
-          difficulty: q.difficulty,
           platform: q.platform,
           order: q.order,
           topicId: topic._id,

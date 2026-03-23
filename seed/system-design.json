@@ -17,7 +17,7 @@
           "title": "System Design & LLD Series",
           "description": "Complete LLD and System Design series with design patterns and real-world projects",
           "order": 1,
-          "difficulty": "hard",
+          "difficulty": "difficult",
           "questions": [
             {
               "title": "Introduction To System Design",
