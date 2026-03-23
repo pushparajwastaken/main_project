@@ -1,5 +1,3 @@
-// app/api/contact/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -28,7 +26,10 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({
+      success: true,
+      message: "Email sent successfully",
+    });
   } catch (error) {
     console.error(error);
     return NextResponse.json(
