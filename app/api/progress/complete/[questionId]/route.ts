@@ -6,7 +6,7 @@ import userSheetProgressModel from "@/model/userSheetProgress.model";
 import topicModel from "@/model/topic.model";
 import { getServerSession } from "next-auth";
 
-export async function GET(
+export async function POST(
   request: Request,
   { params }: { params: { questionId: string } },
 ) {
@@ -24,7 +24,7 @@ export async function GET(
   }
   try {
     await dbConnect();
-    const questionId = params;
+    const questionId = params.questionId;
     if (!questionId) {
       return Response.json(
         {
@@ -64,7 +64,9 @@ export async function GET(
       userId: session.user._id,
       topicId: topic._id,
     });
-    if (topicProgress?.completedQuestions.includes(question._id)) {
+    if (
+      topicProgress?.completedQuestions.some((q) => q.toString() === questionId)
+    ) {
       return Response.json(
         {
           success: false,
@@ -94,11 +96,11 @@ export async function GET(
     const totalQuestionsTopic = await questionModel.countDocuments({
       topicId: question.topicId,
     });
-    const updatedTopicProgress = await UserTopicProgressModel.findOne({
+    await UserTopicProgressModel.findOne({
       userId: session.user._id,
       topicId: question.topicId,
     });
-    const completedCount = updatedTopicProgress?.completedQuestions.length ?? 0;
+    const completedCount = userTopicProgress?.completedQuestions.length ?? 0;
     if (completedCount == totalQuestionsTopic) {
       await UserTopicProgressModel.findOneAndUpdate(
         { userId: session.user._id, topicId: question.topicId },
@@ -109,7 +111,7 @@ export async function GET(
       userId: session.user._id,
       sheetId: topic.sheetId,
     });
-    if (sheetProgress) {
+    if (sheetProgress && completedCount === totalQuestionsTopic) {
       const newCompleted = sheetProgress.completedTopics + 1;
 
       const newPercent = Math.round(
@@ -124,7 +126,7 @@ export async function GET(
             progressPercent: newPercent,
             lastActivity: new Date(),
           },
-          $push: {
+          $addToSet: {
             completedTopicIds: topic._id,
           },
         },

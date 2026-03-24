@@ -1,9 +1,8 @@
 import userSheetProgressModel from "@/model/userSheetProgress.model";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { getServerSession } from "next-auth";
-import SheetModel from "@/model/sheet.model";
+
 import dbConnect from "@/lib/dbConnect";
-import UserModel from "@/model/user.model";
 
 export async function GET(
   request: Request,
@@ -23,7 +22,7 @@ export async function GET(
   }
   try {
     await dbConnect();
-    const { sheetId } = params;
+    const sheetId = params.sheetId;
     if (!sheetId) {
       return Response.json(
         {
