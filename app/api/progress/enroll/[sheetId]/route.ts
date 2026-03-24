@@ -1,5 +1,4 @@
 import dbConnect from "@/lib/dbConnect";
-import UserModel from "@/model/user.model";
 import topicModel from "@/model/topic.model";
 import SheetModel from "@/model/sheet.model";
 import userSheetProgressModel from "@/model/userSheetProgress.model";

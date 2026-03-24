@@ -1,0 +1,585 @@
+{
+  "system_design": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A server is just a computer that provides data or services to other computers."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Start simple—design a system for 100 users before scaling to millions."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "Latency means how long it takes for a request to travel and come back."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A database stores and organizes your app’s data."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Caching means storing frequently used data so you don’t recompute it."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "CAP theorem states you can only guarantee 2 of Consistency, Availability, Partition tolerance."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Load balancers distribute traffic across multiple servers."
+    },
+    {
+      "type": "quick_tip",
+      "level": "intermediate",
+      "text": "Design APIs to be stateless for better scalability."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "Netflix uses chaos engineering to test system resilience."
+    },
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "Sharding splits large datasets across multiple machines."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A request is just when your app asks a server for data."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Reduce unnecessary API calls to improve performance."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "Throughput means how many requests a system can handle per second."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Frontend talks to backend through APIs."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Keep responses small to reduce load time."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Stateless systems scale better because they don’t store user session data."
+    },
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "API rate limiting prevents abuse and overload."
+    },
+    {
+      "type": "quick_tip",
+      "level": "intermediate",
+      "text": "Use pagination instead of sending large datasets at once."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "Eventual consistency allows distributed systems to remain available during failures."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Use circuit breakers to prevent cascading failures."
+    }
+  ],
+
+  "oops": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A class is like a blueprint, and objects are real instances of it."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Think of objects as things and methods as actions they can perform."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "Encapsulation means hiding data and exposing only what’s needed."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Inheritance lets one class reuse properties of another."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Use simple classes first before applying complex design patterns."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Polymorphism allows one interface to behave differently based on context."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "SOLID principles improve code maintainability."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "Dependency Injection reduces tight coupling between components."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Favor composition over inheritance for flexibility."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Objects store both data and behavior together."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Use simple examples (like car, user) to understand OOP concepts."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "Methods are just functions inside a class."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Constructors initialize objects when they are created."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Avoid putting too many responsibilities in one class."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Overriding lets subclasses change behavior of parent methods."
+    },
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Interfaces define what a class can do, not how it does it."
+    },
+    {
+      "type": "quick_tip",
+      "level": "intermediate",
+      "text": "Use abstraction to hide complex logic."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "Loose coupling improves scalability and testability."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Design patterns should solve problems, not complicate them."
+    }
+  ],
+
+  "dbms": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A table in a database is like a spreadsheet with rows and columns."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Each row represents one record (like one user)."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "SQL is a language used to talk to databases."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A primary key uniquely identifies each row."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Avoid storing duplicate data—it can cause inconsistencies."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Indexes can speed up queries by 100x but slow down writes."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Normalization reduces redundancy but can hurt performance."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "Eventual consistency allows systems to scale at the cost of immediate accuracy."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Use sharding for very large datasets."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A column represents a specific type of data like name or age."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Use clear column names to make queries easier to read."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "CRUD stands for Create, Read, Update, Delete."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Databases can store millions of records efficiently."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Use LIMIT to avoid fetching too much data."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Joins combine data from multiple tables."
+    },
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Transactions ensure operations either fully succeed or fail."
+    },
+    {
+      "type": "quick_tip",
+      "level": "intermediate",
+      "text": "Use indexes on frequently searched columns."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "Distributed databases trade strict consistency for availability."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Partition large tables to improve performance."
+    }
+  ],
+
+  "networking": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "The internet is a network of computers connected worldwide."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "A URL is like an address that tells your browser where to go."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "HTTP is the protocol used to transfer web pages."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "An IP address uniquely identifies a device on a network."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "HTTPS is just HTTP with encryption for security."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "TCP ensures reliable delivery of data packets."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "DNS converts domain names into IP addresses."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "HTTP/3 uses QUIC over UDP for faster connections."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Reduce latency using CDNs."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Your browser sends requests every time you click a link."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Fewer requests = faster websites."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "A protocol is just a set of rules for communication."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "WiFi and mobile data both connect you to the internet."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Use caching to reduce repeated network calls."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Bandwidth is the amount of data that can be transferred per second."
+    },
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Latency is the delay before data transfer begins."
+    },
+    {
+      "type": "quick_tip",
+      "level": "intermediate",
+      "text": "Optimize images to reduce network load."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "Packet switching allows efficient data transfer across networks."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Use persistent connections to reduce handshake overhead."
+    }
+  ],
+
+  "programming": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A variable is a container that stores data."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Break big problems into smaller steps."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "A loop lets you repeat tasks without rewriting code."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Functions help reuse code instead of repeating it."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Start with readability before optimization."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Time complexity measures how fast code runs as input grows."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Recursion is when a function calls itself."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "Big-O notation describes algorithm scalability."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Avoid premature optimization."
+    },
+
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "A bug is simply an error in your code."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Read error messages carefully—they often tell you the problem."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "Syntax errors happen when code doesn’t follow language rules."
+    },
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Debugging is the process of finding and fixing bugs."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "Practice coding daily to improve faster."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Data structures organize data for efficient access."
+    },
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Arrays store elements in contiguous memory."
+    },
+    {
+      "type": "quick_tip",
+      "level": "intermediate",
+      "text": "Choose the right data structure for better performance."
+    },
+
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "Concurrency allows multiple tasks to run simultaneously."
+    },
+    {
+      "type": "quick_tip",
+      "level": "advanced",
+      "text": "Avoid shared mutable state in concurrent programs."
+    }
+  ],
+
+  "wow_facts": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Google processes over 8.5 billion searches every day."
+    },
+    {
+      "type": "dev_fact",
+      "level": "beginner",
+      "text": "Over 90% of the world’s data was created in recent years."
+    },
+    {
+      "type": "did_you_know",
+      "level": "intermediate",
+      "text": "Netflix streams petabytes of data daily."
+    },
+    {
+      "type": "dev_fact",
+      "level": "advanced",
+      "text": "The internet handles zettabytes of data annually."
+    }
+  ],
+
+  "company_facts": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "Netflix uses CDNs to stream content closer to users."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "Uber uses geospatial indexing to match riders and drivers."
+    },
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "Google Spanner provides globally consistent databases."
+    }
+  ],
+
+  "humor_facts": [
+    {
+      "type": "did_you_know",
+      "level": "beginner",
+      "text": "99% of programming is wondering why your code doesn’t work."
+    },
+    {
+      "type": "quick_tip",
+      "level": "beginner",
+      "text": "If it works, don’t touch it."
+    },
+    {
+      "type": "dev_fact",
+      "level": "intermediate",
+      "text": "There’s always that one function you’re scared to touch."
+    },
+    {
+      "type": "did_you_know",
+      "level": "advanced",
+      "text": "It worked on your machine… that’s the problem."
+    }
+  ]
+}
