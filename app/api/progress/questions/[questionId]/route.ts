@@ -5,11 +5,9 @@ import UserTopicProgressModel from "@/model/userTopicProgress.model";
 import userSheetProgressModel from "@/model/userSheetProgress.model";
 import topicModel from "@/model/topic.model";
 import { getServerSession } from "next-auth";
-
-export async function POST(
-  request: Request,
-  { params }: { params: { questionId: string } },
-) {
+// we send two types of requests on this route
+export async function POST({ params }: { params: { questionId: string } }) {
+  //get session from the server
   const session = await getServerSession(authOptions);
   if (!session) {
     return Response.json(
@@ -24,6 +22,7 @@ export async function POST(
   }
   try {
     await dbConnect();
+    //get the question Id from the parameters
     const questionId = params.questionId;
     if (!questionId) {
       return Response.json(
@@ -36,6 +35,7 @@ export async function POST(
         },
       );
     }
+    //search for the question with the help of questionId
     const question = await questionModel.findById(questionId);
     if (!question) {
       return Response.json(
@@ -48,6 +48,7 @@ export async function POST(
         },
       );
     }
+    //search for the topic with the help of the topicId in the question Model
     const topic = await topicModel.findById(question.topicId);
     if (!topic) {
       return Response.json(
@@ -60,10 +61,12 @@ export async function POST(
         },
       );
     }
+    // search for a user with the userId from session and topicId from topic model
     const topicProgress = await UserTopicProgressModel.findOne({
       userId: session.user._id,
       topicId: topic._id,
     });
+    //if user has already completed that question,i.e, the question exists in topic progress model then we return
     if (
       topicProgress?.completedQuestions.some((q) => q.toString() === questionId)
     ) {
@@ -77,6 +80,7 @@ export async function POST(
         },
       );
     }
+    //find the user topic progress model and add the question id to it and update the lastActivity
     const userTopicProgress = await UserTopicProgressModel.findOneAndUpdate(
       {
         userId: session.user._id,
@@ -93,24 +97,25 @@ export async function POST(
       },
       { upsert: true, new: true },
     );
+    //find the total no of questions of that topic
     const totalQuestionsTopic = await questionModel.countDocuments({
       topicId: question.topicId,
     });
-    await UserTopicProgressModel.findOne({
-      userId: session.user._id,
-      topicId: question.topicId,
-    });
+    //find the total completed questions from the userTopicProgress Model
     const completedCount = userTopicProgress?.completedQuestions.length ?? 0;
+    //if completed questions ==totalQuestions update topicprogressmodel.isCompleted to true
     if (completedCount == totalQuestionsTopic) {
       await UserTopicProgressModel.findOneAndUpdate(
         { userId: session.user._id, topicId: question.topicId },
         { $set: { isCompleted: true, completedAt: new Date() } },
       );
     }
+    // find user sheet progress
     const sheetProgress = await userSheetProgressModel.findOne({
       userId: session.user._id,
       sheetId: topic.sheetId,
     });
+    //if sheet progress exists and the topic is completed update the total completed topics in user sheet
     if (sheetProgress && completedCount === totalQuestionsTopic) {
       const newCompleted = sheetProgress.completedTopics + 1;
 
@@ -150,7 +155,9 @@ export async function POST(
     );
   }
 }
+//deleting a questionId
 export async function DELETE({ params }: { params: { questionId: string } }) {
+  //get session from the erver
   const session = await getServerSession(authOptions);
   if (!session) {
     return Response.json(
@@ -165,6 +172,7 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
   }
   try {
     await dbConnect();
+    //extract questionid from parame
     const questionId = params.questionId;
     if (!questionId) {
       return Response.json(
@@ -177,6 +185,7 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
         },
       );
     }
+    // find the question with the help of the question id
     const question = await questionModel.findById(questionId);
     if (!question) {
       return Response.json(
@@ -189,6 +198,7 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
         },
       );
     }
+    //find the topic from the topic id
     const topic = await topicModel.findById(question.topicId);
     if (!topic) {
       return Response.json(
@@ -201,7 +211,7 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
         },
       );
     }
-
+    //find the topic progress model and remove the questionid from completed questions
     const topicProgress = await UserTopicProgressModel.findOneAndUpdate(
       {
         userId: session.user._id,
@@ -218,15 +228,18 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
       },
       { upsert: true, new: true },
     );
+    //find total number of questions in topic and completed question
     const totalQuestionsTopic = await questionModel.countDocuments({
       topicId: question.topicId,
     });
 
     const completedCount = topicProgress?.completedQuestions.length ?? 0;
+    //find user progress sheet
     const sheetProgress = await userSheetProgressModel.findOne({
       userId: session.user._id,
       sheetId: topic.sheetId,
     });
+    //if shheet exists and the topic is marked completed and completedCount<totalQuestionsop
     if (
       sheetProgress &&
       topicProgress?.isCompleted &&
@@ -236,7 +249,7 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
       const newPercent = Math.round(
         (newCompleted / sheetProgress.totalTopics) * 100,
       );
-
+      //remove the topic from the user sheet progress model
       await userSheetProgressModel.findOneAndUpdate(
         { userId: session.user._id, sheetId: topic.sheetId },
         {
@@ -250,6 +263,7 @@ export async function DELETE({ params }: { params: { questionId: string } }) {
           },
         },
       );
+      //turn usertopicprogress to isCompleted False
       await UserTopicProgressModel.findOneAndUpdate(
         { userId: session.user._id, topicId: question.topicId },
         {

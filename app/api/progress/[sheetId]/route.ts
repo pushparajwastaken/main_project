@@ -8,6 +8,7 @@ export async function GET(
   request: Request,
   { params }: { params: { sheetId: string } },
 ) {
+  //get the session
   const session = await getServerSession(authOptions);
 
   if (!session) {
@@ -21,14 +22,14 @@ export async function GET(
     await dbConnect();
 
     const sheetId = params.sheetId;
-
+    //get sheet from sheetid
     if (!sheetId) {
       return Response.json(
         { success: false, message: "Sheet ID is required" },
         { status: 400 },
       );
     }
-
+    //search for user progress in that sheet
     const userSheet = await userSheetProgressModel.findOne({
       userId: session.user._id,
       sheetId,
@@ -40,14 +41,14 @@ export async function GET(
         { status: 404 },
       );
     }
-
+    //search for user topic progress
     const topics = await UserTopicProgressModel.find({
       userId: session.user._id,
       sheetId,
     });
-
+    //search for the topic
     const topicIds = topics.map((t) => t.topicId);
-
+    //search for total questions and group them by topicId and the question
     const questionCounts = await questionModel.aggregate([
       { $match: { topicId: { $in: topicIds } } },
       {

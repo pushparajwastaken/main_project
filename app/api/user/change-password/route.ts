@@ -4,6 +4,7 @@ import UserModel from "@/model/user.model";
 import bcryptjs from "bcryptjs";
 import dbConnect from "@/lib/dbConnect";
 export async function POST(request: Request) {
+  //get session
   const session = await getServerSession(authOptions);
   if (!session) {
     return Response.json(
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
     );
   }
   await dbConnect();
+  //get new password and current password
   const { currentPassword, newPassword } = await request.json();
   try {
     const user = await UserModel.findById(session.user._id).select("+password");
@@ -31,6 +33,7 @@ export async function POST(request: Request) {
         },
       );
     }
+    //check if the current password provided by the user is same as the password stored in the db
     const isPasswordSame = await bcryptjs.compare(
       user.password,
       currentPassword,
@@ -46,6 +49,7 @@ export async function POST(request: Request) {
         },
       );
     }
+    //create a hash of the new password and then save it
     const newHashedPassword = await bcryptjs.hash(newPassword, 10);
     user.password = newHashedPassword;
     await user.save();

@@ -8,6 +8,7 @@ export async function POST(
   request: Request,
   { params }: { params: { sheetId: string } },
 ) {
+  //get the user
   const session = await getServerSession(authOptions);
   if (!session?.user) {
     return Response.json(
@@ -22,7 +23,7 @@ export async function POST(
   }
   try {
     await dbConnect();
-
+    //get sheetId from params
     const { sheetId } = params;
     if (!sheetId) {
       return Response.json(
@@ -35,6 +36,7 @@ export async function POST(
         },
       );
     }
+    //get the sheet with the help of sheetID
     const sheet = await SheetModel.findById(sheetId);
     if (!sheet) {
       return Response.json(
@@ -44,6 +46,7 @@ export async function POST(
         },
       );
     }
+    //check if the user already exists
     const existingUserSheetProgress = await userSheetProgressModel.findOne({
       userId: session.user._id,
       sheetId,
@@ -59,6 +62,7 @@ export async function POST(
         },
       );
     }
+    //search for total topics in the sheet
     const totalTopics = await topicModel.countDocuments({ sheetId });
     await userSheetProgressModel.create({
       userId: session.user._id,

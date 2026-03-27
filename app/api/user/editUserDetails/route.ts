@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth/next";
 import dbConnect from "@/lib/dbConnect";
 import { success } from "zod";
 export async function POST(request: Request) {
+  //get session from the server
   const session = await getServerSession(authOptions);
   if (!session) {
     return Response.json(
@@ -18,6 +19,7 @@ export async function POST(request: Request) {
   }
   await dbConnect();
   try {
+    //extract the information from the request and find the user from the help of session and then update the info if it exists
     const { college, gradYear, username } = await request.json();
     const user = await UserModel.findById(session.user._id);
     if (!user) {

@@ -5,8 +5,10 @@ import dbConnect from "@/lib/dbConnect";
 export async function POSY(request: Request) {
   await dbConnect();
   try {
+    //get username and code from request
     const { username, code } = await request.json();
     const decodedUsername = decodeURIComponent(username);
+    //find user with username
     const user = await UserModel.findOne({ username: decodedUsername });
     if (!user) {
       return Response.json(
@@ -17,6 +19,7 @@ export async function POSY(request: Request) {
         { status: 404 },
       );
     }
+    //check for the validity of the code and it's exipiry
     const isCodeValid = user.verifyToken === code;
     const isCodeNotExpired = new Date(user.verifyTokenExpiry) > new Date();
     if (isCodeValid && isCodeNotExpired) {

@@ -6,6 +6,7 @@ import { signUpSchema } from "@/schemas/signUpSchema";
 export async function POST(request: Request) {
   await dbConnect();
   try {
+    //get body from the request and then validate it with signup schema
     const body = await request.json();
     const result = signUpSchema.safeParse(body);
     if (!result.success) {
@@ -14,11 +15,14 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+    //extract the info after validation
     const { username, email, password, college, gradYear } = result.data;
+    //check if the user with same username exists
     const existingUserVerifiedByUsername = await UserModel.findOne({
       username,
       emailVerified: true,
     });
+
     if (existingUserVerifiedByUsername) {
       return Response.json(
         {
@@ -31,7 +35,9 @@ export async function POST(request: Request) {
     const existingUserByEmail = await UserModel.findOne({
       email,
     });
+    //create a verify code
     const verifyCode = Math.floor(100000 + Math.random() * 900000).toString();
+    //check if user already exists with the same email
     if (existingUserByEmail) {
       if (existingUserByEmail.emailVerified) {
         return Response.json(
@@ -42,6 +48,7 @@ export async function POST(request: Request) {
           { status: 400 },
         );
       } else {
+        //if user exists but email not verified then update it's following info
         const hashedPassword = await bcrypt.hash(password, 10);
         existingUserByEmail.password = hashedPassword;
         existingUserByEmail.verifyToken = verifyCode;
@@ -60,6 +67,7 @@ export async function POST(request: Request) {
         }
       }
     } else {
+      //if user with email doesn't exist create a new user
       const hashedPassword = await bcrypt.hash(password, 10);
       const expiryDate = new Date();
       expiryDate.setHours(expiryDate.getHours() + 1);

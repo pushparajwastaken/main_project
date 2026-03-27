@@ -5,7 +5,9 @@ import UserModel from "@/model/user.model";
 import { flightRouterStateSchema } from "next/dist/server/app-render/types";
 
 export async function GET() {
+  //get session from the server
   const session = await getServerSession(authOptions);
+
   if (!session) {
     return Response.json(
       {
@@ -19,6 +21,7 @@ export async function GET() {
   }
   try {
     await dbConnect();
+    //find user from userid we get that we store in session while signing up
     const user = await UserModel.findById(session.user._id);
     if (!user) {
       return Response.json(

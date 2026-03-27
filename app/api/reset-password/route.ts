@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 export async function POST(request: Request) {
   await dbConnect();
   try {
+    //get the request and then validate it with resetPassword schema
     const body = await request.json();
     const result = resetPasswordSchema.safeParse(body);
     if (!result.success) {
@@ -13,6 +14,7 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+    //get a  token and password for verification
     const { token, password } = result.data;
     const user = await UserModel.findOne({
       resetPasswordToken: token,
