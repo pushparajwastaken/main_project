@@ -2,7 +2,7 @@ import { z } from "zod";
 import UserModel from "@/model/user.model";
 import dbConnect from "@/lib/dbConnect";
 
-export async function POSY(request: Request) {
+export async function POST(request: Request) {
   await dbConnect();
   try {
     //get username and code from request
