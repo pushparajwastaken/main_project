@@ -29,7 +29,7 @@ export async function GET() {
           success: false,
           message: "User not found",
         },
-        { status: 400 },
+        { status: 404 },
       );
     }
     return Response.json(
@@ -50,7 +50,7 @@ export async function GET() {
         message: "Unable to fetch user info",
       },
       {
-        status: 400,
+        status: 404,
       },
     );
   }

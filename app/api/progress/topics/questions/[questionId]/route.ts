@@ -6,7 +6,10 @@ import userSheetProgressModel from "@/model/userSheetProgress.model";
 import topicModel from "@/model/topic.model";
 import { getServerSession } from "next-auth";
 // we send two types of requests on this route
-export async function POST({ params }: { params: { questionId: string } }) {
+export async function POST(
+  request: Request,
+  { params }: { params: { questionId: string } },
+) {
   //get session from the server
   const session = await getServerSession(authOptions);
   if (!session) {
@@ -156,7 +159,10 @@ export async function POST({ params }: { params: { questionId: string } }) {
   }
 }
 //deleting a questionId
-export async function DELETE({ params }: { params: { questionId: string } }) {
+export async function DELETE(
+  request: Request,
+  { params }: { params: { questionId: string } },
+) {
   //get session from the erver
   const session = await getServerSession(authOptions);
   if (!session) {

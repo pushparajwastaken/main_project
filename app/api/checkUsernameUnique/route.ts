@@ -50,7 +50,7 @@ export async function GET(request: Request) {
     //search for existing username who is also verified
     const existingVerifiedUser = await UserModel.findOne({
       username,
-      isVerified: true,
+      emailVerified: true,
     });
     if (existingVerifiedUser) {
       return Response.json(
@@ -66,7 +66,7 @@ export async function GET(request: Request) {
         success: true,
         message: "Username is unqiue",
       },
-      { status: 201 },
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error checking username", error);

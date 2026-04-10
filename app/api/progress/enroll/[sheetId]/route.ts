@@ -75,7 +75,7 @@ export async function POST(
     });
     return Response.json(
       {
-        success: false,
+        success: true,
         message: "Enrolled successfully in the sheet",
       },
       {

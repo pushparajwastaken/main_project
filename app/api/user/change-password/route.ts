@@ -35,8 +35,8 @@ export async function POST(request: Request) {
     }
     //check if the current password provided by the user is same as the password stored in the db
     const isPasswordSame = await bcryptjs.compare(
-      user.password,
       currentPassword,
+      user.password,
     );
     if (!isPasswordSame) {
       return Response.json(
