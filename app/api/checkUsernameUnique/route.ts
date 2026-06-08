@@ -13,7 +13,7 @@ export async function GET(request: Request) {
     return Response.json(
       {
         success: false,
-        message: "Method not allowoed",
+        message: "Method not allowed",
       },
       { status: 405 },
     );
@@ -64,7 +64,7 @@ export async function GET(request: Request) {
     return Response.json(
       {
         success: true,
-        message: "Username is unqiue",
+        message: "Username is unique",
       },
       { status: 200 },
     );
