@@ -48,10 +48,7 @@ export async function GET(request: Request) {
     //get username after validation
     const { username } = result.data;
     //search for existing username who is also verified
-    const existingVerifiedUser = await UserModel.findOne({
-      username,
-      emailVerified: true,
-    });
+    const existingVerifiedUser = await UserModel.findOne({ username });
     if (existingVerifiedUser) {
       return Response.json(
         {
