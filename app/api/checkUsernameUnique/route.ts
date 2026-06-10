@@ -8,24 +8,12 @@ const usernameQuerySchema = z.object({
 });
 
 export async function GET(request: Request) {
-  //TODO-Use this in all other routes
-  if (request.method !== "GET") {
-    return Response.json(
-      {
-        success: false,
-        message: "Method not allowed",
-      },
-      { status: 405 },
-    );
-  }
-  await dbConnect();
   try {
-    //get paramters from url and then search for parameter named username
+    await dbConnect();
     const { searchParams } = new URL(request.url);
     const queryParama = {
       username: searchParams.get("username"),
     };
-    //validate with Zod
     const result = usernameQuerySchema.safeParse(queryParama);
 
     if (!result.success) {
@@ -45,9 +33,7 @@ export async function GET(request: Request) {
         },
       );
     }
-    //get username after validation
     const { username } = result.data;
-    //search for existing username who is also verified
     const existingVerifiedUser = await UserModel.findOne({ username });
     if (existingVerifiedUser) {
       return Response.json(

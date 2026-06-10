@@ -9,50 +9,37 @@ export const authOptions: NextAuthOptions = {
       id: "credentials",
       name: "Credentials",
       credentials: {
-        identifier: {
-          label: "Email or Username",
-          type: "text",
-          placeholder: "lavanya@gmail.com",
-        },
+        identifier: { label: "Email or Username", type: "text" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials: any): Promise<any> {
         await dbConnect();
-        try {
-          const user = await UserModel.findOne({
-            $or: [
-              { email: credentials.identifier },
-              { username: credentials.identifier },
-            ],
-          }).select("+password");
-          if (!user) {
-            throw new Error("No user found with this email or username");
-          }
-          if (!user.emailVerified) {
-            throw new Error("Please verify your email before signing in");
-          }
-          const isPasswordCorrect = await bcrypt.compare(
-            credentials.password,
-            user.password,
-          );
-          if (isPasswordCorrect) {
-            return user;
-          } else {
-            throw new Error("Incorrect Password");
-          }
-        } catch (error: any) {
-          throw new Error(error.message);
+        const user = await UserModel.findOne({
+          $or: [
+            { email: credentials.identifier },
+            { username: credentials.identifier },
+          ],
+        }).select("+password");
+        if (!user) {
+          throw new Error("No user found with this email or username");
         }
+        const isPasswordCorrect = await bcrypt.compare(
+          credentials.password,
+          user.password,
+        );
+        if (!isPasswordCorrect) {
+          throw new Error("Incorrect Password");
+        }
+        return user;
       },
     }),
   ],
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token._id = user._id?.toString(); //this user is from next-auth and it doesn't have ._id so
-        //updated the user in the types/next-auth.d.ts
-        token.emailVerified = !!user?.emailVerified;
-        token.username = user?.username;
+        token._id = user._id?.toString();
+        token.emailVerified = !!user.emailVerified;
+        token.username = user.username;
       }
       return token;
     },

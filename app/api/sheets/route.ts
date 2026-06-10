@@ -5,14 +5,6 @@ export async function GET(request: Request) {
   try {
     await dbConnect();
     const sheets = await SheetModel.find({});
-    if (!sheets) {
-      return Response.json(
-        { success: false, message: "Sheets not found" },
-        {
-          status: 404,
-        },
-      );
-    }
     return Response.json(
       {
         success: true,
@@ -26,10 +18,8 @@ export async function GET(request: Request) {
   } catch (err: any) {
     console.error("Error fetching the sheets", err);
     return Response.json(
-      { success: false, message: err.message },
-      {
-        status: 400,
-      },
+      { success: false, message: "Error fetching the sheets" },
+      { status: 500 },
     );
   }
 }

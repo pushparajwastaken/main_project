@@ -3,9 +3,8 @@ import UserModel from "@/model/user.model";
 import dbConnect from "@/lib/dbConnect";
 import bcrypt from "bcryptjs";
 export async function POST(request: Request) {
-  await dbConnect();
   try {
-    //get the request and then validate it with resetPassword schema
+    await dbConnect();
     const body = await request.json();
     const result = resetPasswordSchema.safeParse(body);
     if (!result.success) {
@@ -14,7 +13,6 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
-    //get a  token and password for verification
     const { token, password } = result.data;
     const user = await UserModel.findOne({
       resetPasswordToken: token,
@@ -46,15 +44,10 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   } catch (error) {
-    console.error("Error reseting the Password", error);
+    console.error("Error resetting the Password", error);
     return Response.json(
-      {
-        success: false,
-        message: "Error reseting the password",
-      },
-      {
-        status: 400,
-      },
+      { success: false, message: "Error resetting the password" },
+      { status: 500 },
     );
   }
 }

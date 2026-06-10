@@ -4,8 +4,8 @@ import UserModel from "@/model/user.model";
 import dbConnect from "@/lib/dbConnect";
 import { randomBytes } from "crypto";
 export async function POST(request: Request) {
-  await dbConnect();
   try {
+    await dbConnect();
     //get the information from the request
     const body = await request.json();
     //validate the password
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
         success: true,
         message: "Reset Password Email sent successfully",
       },
-      { status: 201 },
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error sending Reset Password Link", error);

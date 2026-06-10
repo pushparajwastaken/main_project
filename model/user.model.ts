@@ -7,8 +7,6 @@ export interface User extends Document {
   email: string;
   password: string;
   emailVerified: boolean;
-  verifyToken: string;
-  verifyTokenExpiry: Date;
   college: string;
   gradYear: number;
   subscription: {
@@ -46,13 +44,6 @@ const userSchema: Schema<User> = new Schema(
       type: Boolean,
       default: false,
     },
-    verifyToken: {
-      type: String,
-    },
-    verifyTokenExpiry: {
-      type: Date,
-    },
-
     college: {
       type: String,
     },

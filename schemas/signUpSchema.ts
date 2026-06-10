@@ -18,10 +18,6 @@ export const signUpSchema = z.object({
     .string()
     .min(2, "College name must be atleast 2 characters")
     .max(100, "College name cannot be more than 100 characters")
-    .regex(
-      /^[a-zA-Z0-9_]+$/,
-      "College name must not contain special characters",
-    )
     .optional(),
   gradYear: z
     .number()

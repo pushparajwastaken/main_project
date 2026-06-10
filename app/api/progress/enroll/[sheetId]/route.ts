@@ -54,7 +54,7 @@ export async function POST(
     if (existingUserSheetProgress) {
       return Response.json(
         {
-          success: false,
+          success: true,
           message: "Already enrolled",
         },
         {
@@ -90,7 +90,7 @@ export async function POST(
         message: "Error enrolling to the sheet",
       },
       {
-        status: 400,
+        status: 500,
       },
     );
   }

@@ -17,7 +17,6 @@ async function dbConnect(): Promise<mongoose.Connection> {
   }
   const MONGODB_URI = process.env.MONGODB_URI;
   if (cached.conn) {
-    console.log("Already connected to the database");
     return cached.conn;
   }
 
@@ -31,7 +30,6 @@ async function dbConnect(): Promise<mongoose.Connection> {
   try {
     const db = await cached.promise;
     cached.conn = db.connections[0];
-    console.log("DB Connected Successfully");
     return cached.conn;
   } catch (error) {
     cached.promise = null;

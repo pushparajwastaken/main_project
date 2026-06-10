@@ -17,10 +17,9 @@ export async function POST(request: Request) {
       },
     );
   }
-  await dbConnect();
-  //get new password and current password
-  const { currentPassword, newPassword } = await request.json();
   try {
+    await dbConnect();
+    const { currentPassword, newPassword } = await request.json();
     const user = await UserModel.findById(session.user._id).select("+password");
     if (!user) {
       return Response.json(

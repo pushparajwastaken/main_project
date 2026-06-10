@@ -10,7 +10,7 @@ export interface UserSheetProgress extends Document {
   subjectProgress: [
     {
       subjectId: Schema.Types.ObjectId;
-      total: number;
+      totalTopics: number;
       completedTopics: number;
       progressPercent: number;
     },

@@ -46,10 +46,8 @@ export async function GET(
   } catch (err: any) {
     console.error("Error fetching sheets", err);
     return Response.json(
-      { success: false, message: err.message },
-      {
-        status: 400,
-      },
+      { success: false, message: "Error fetching the sheet" },
+      { status: 500 },
     );
   }
 }

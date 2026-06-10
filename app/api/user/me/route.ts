@@ -49,7 +49,7 @@ export async function GET() {
         message: "Unable to fetch user info",
       },
       {
-        status: 404,
+        status: 500,
       },
     );
   }

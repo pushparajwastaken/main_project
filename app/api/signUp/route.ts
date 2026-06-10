@@ -3,8 +3,8 @@ import UserModel from "@/model/user.model";
 import bcrypt from "bcryptjs";
 import { signUpSchema } from "@/schemas/signUpSchema";
 export async function POST(request: Request) {
-  await dbConnect();
   try {
+    await dbConnect();
     const body = await request.json();
     const result = signUpSchema.safeParse(body);
     if (!result.success) {

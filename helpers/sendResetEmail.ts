@@ -9,14 +9,15 @@ export async function sendResetEmail(
 ): Promise<ApiResponse> {
   try {
     const resetLink = `${process.env.NEXTAUTH_URL}/reset-password?token=${resetPasswordToken}`;
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: email,
-      subject: "PlacedIn: Reset Passsword Link",
+      subject: "PlacedIn: Reset Password Link",
       react: ResetEmail({ username: username, resetLink }),
     });
-    console.log("Resend data:", data);
-    console.log("Resend error:", error);
+    if (error) {
+      return { success: false, message: error.message };
+    }
     return { success: true, message: "Reset Password Email sent successfully" };
   } catch (error: unknown) {
     console.error("Error sending Reset Password Email", error);
