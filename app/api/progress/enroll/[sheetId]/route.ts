@@ -6,7 +6,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/options";
 export async function POST(
   request: Request,
-  { params }: { params: { sheetId: string } },
+  { params }: { params: Promise<{ sheetId: string }> },
 ) {
   //get the user
   const session = await getServerSession(authOptions);
@@ -24,7 +24,7 @@ export async function POST(
   try {
     await dbConnect();
     //get sheetId from params
-    const { sheetId } = params;
+    const { sheetId } = await params;
     if (!sheetId) {
       return Response.json(
         {
@@ -87,7 +87,7 @@ export async function POST(
     return Response.json(
       {
         success: false,
-        message: "Error enrolling to the audience",
+        message: "Error enrolling to the sheet",
       },
       {
         status: 400,

@@ -2,7 +2,6 @@ import dbConnect from "@/lib/dbConnect";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { getServerSession } from "next-auth";
 import UserModel from "@/model/user.model";
-import { flightRouterStateSchema } from "next/dist/server/app-render/types";
 
 export async function GET() {
   //get session from the server
@@ -11,11 +10,11 @@ export async function GET() {
   if (!session) {
     return Response.json(
       {
-        sucess: false,
+        success: false,
         message: "Unauthorized",
       },
       {
-        status: 400,
+        status: 401,
       },
     );
   }

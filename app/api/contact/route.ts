@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
     //use resend to send those emails to your sel
     await resend.emails.send({
-      from: email,
+      from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
       to: ["psinghparmar42@gmail.com"],
       subject: `New message from ${name}`,
       replyTo: email,

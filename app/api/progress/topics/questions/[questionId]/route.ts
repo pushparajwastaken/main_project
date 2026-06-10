@@ -8,7 +8,7 @@ import { getServerSession } from "next-auth";
 // we send two types of requests on this route
 export async function POST(
   request: Request,
-  { params }: { params: { questionId: string } },
+  { params }: { params: Promise<{ questionId: string }> },
 ) {
   //get session from the server
   const session = await getServerSession(authOptions);
@@ -26,7 +26,7 @@ export async function POST(
   try {
     await dbConnect();
     //get the question Id from the parameters
-    const questionId = params.questionId;
+    const { questionId } = await params;
     if (!questionId) {
       return Response.json(
         {
@@ -153,7 +153,7 @@ export async function POST(
         message: "Error updating",
       },
       {
-        status: 401,
+        status: 500,
       },
     );
   }
@@ -161,9 +161,9 @@ export async function POST(
 //deleting a questionId
 export async function DELETE(
   request: Request,
-  { params }: { params: { questionId: string } },
+  { params }: { params: Promise<{ questionId: string }> },
 ) {
-  //get session from the erver
+  //get session from the server
   const session = await getServerSession(authOptions);
   if (!session) {
     return Response.json(
@@ -178,8 +178,8 @@ export async function DELETE(
   }
   try {
     await dbConnect();
-    //extract questionid from parame
-    const questionId = params.questionId;
+    //extract questionid from params
+    const { questionId } = await params;
     if (!questionId) {
       return Response.json(
         {
@@ -290,7 +290,7 @@ export async function DELETE(
         message: "Error updating",
       },
       {
-        status: 401,
+        status: 500,
       },
     );
   }

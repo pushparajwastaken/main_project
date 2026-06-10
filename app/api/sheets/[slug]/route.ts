@@ -3,11 +3,11 @@ import dbConnect from "@/lib/dbConnect";
 
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } },
+  { params }: { params: Promise<{ slug: string }> },
 ) {
   try {
     await dbConnect();
-    const { slug } = params;
+    const { slug } = await params;
     if (!slug) {
       return Response.json(
         {

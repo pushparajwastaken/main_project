@@ -1,7 +1,5 @@
-import UserModel from "@/model/user.model";
 import SheetModel from "@/model/sheet.model";
 import dbConnect from "@/lib/dbConnect";
-import { success } from "zod";
 
 export async function GET(request: Request) {
   try {

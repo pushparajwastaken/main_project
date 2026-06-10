@@ -6,7 +6,7 @@ import UserTopicProgressModel from "@/model/userTopicProgress.model";
 import questionModel from "@/model/question.model";
 export async function GET(
   request: Request,
-  { params }: { params: { sheetId: string } },
+  { params }: { params: Promise<{ sheetId: string }> },
 ) {
   //get the session
   const session = await getServerSession(authOptions);
@@ -21,7 +21,7 @@ export async function GET(
   try {
     await dbConnect();
 
-    const sheetId = params.sheetId;
+    const { sheetId } = await params;
     //get sheet from sheetid
     if (!sheetId) {
       return Response.json(

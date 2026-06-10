@@ -2,7 +2,6 @@ import UserModel from "@/model/user.model";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { getServerSession } from "next-auth/next";
 import dbConnect from "@/lib/dbConnect";
-import { success } from "zod";
 export async function POST(request: Request) {
   //get session from the server
   const session = await getServerSession(authOptions);
@@ -13,7 +12,7 @@ export async function POST(request: Request) {
         message: "Unauthorized",
       },
       {
-        status: 400,
+        status: 401,
       },
     );
   }
@@ -50,7 +49,7 @@ export async function POST(request: Request) {
           success: true,
           message: "User details remain same",
         },
-        { status: 400 },
+        { status: 200 },
       );
     }
     await user.save();
