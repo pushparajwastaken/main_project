@@ -2,174 +2,116 @@
 
 import * as React from "react";
 import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { useSession, signOut } from "next-auth/react";
+import { Menu, X, LayoutDashboard, LogOut, BookOpen } from "lucide-react";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
+export function Header() {
+  const { data: session } = useSession();
+  const [open, setOpen] = React.useState(false);
 
-export function NavigationMenuDemo() {
   return (
-    <div className="fixed top-4 left-0 w-full hidden lg:flex justify-center px-4 z-50 font-mono rounded-lg">
-      <div className="rounded-full border border-border bg-background/80 backdrop-blur-md shadow-lg px-2 py-1">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="w-96">
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built with Tailwind CSS.
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
-                  >
-                    Styles for headings, paragraphs, lists...etc
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="hidden md:flex">
-              <NavigationMenuTrigger>Features</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 lg:w-150">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">Why Us?</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">Stats</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">Testimonials</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">Sponsors</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">FAQ</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">Contact</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/docs">Login</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
-    </div>
-  );
-}
-
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="flex flex-col gap-1 text-sm">
-            <div className="leading-none font-medium">{title}</div>
-            <div className="line-clamp-2 text-muted-foreground">{children}</div>
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg">
+          <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-xs font-black select-none">
+            P
           </div>
+          PlacedIn
         </Link>
-      </NavigationMenuLink>
-    </li>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-1">
+          <Link href="/sheets" className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors">
+            <BookOpen size={14} />
+            Sheets
+          </Link>
+          <Link href="/#features" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors">
+            Features
+          </Link>
+          <Link href="/#faq" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors">
+            FAQ
+          </Link>
+        </nav>
+
+        {/* Auth — desktop */}
+        <div className="hidden md:flex items-center gap-2">
+          {session ? (
+            <>
+              <Link
+                href="/dashboard"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors"
+              >
+                <LayoutDashboard size={14} />
+                Dashboard
+              </Link>
+              <button
+                onClick={() => signOut({ callbackUrl: "/" })}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors"
+              >
+                <LogOut size={14} />
+                Sign out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/signIn" className="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors">
+                Sign in
+              </Link>
+              <Link href="/signUp" className="px-4 py-1.5 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
+                Get started free
+              </Link>
+            </>
+          )}
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden p-2 rounded-md hover:bg-muted transition-colors"
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden border-t border-border/40 bg-background px-4 py-4 space-y-1">
+          <Link href="/sheets" className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors" onClick={() => setOpen(false)}>
+            <BookOpen size={14} /> Sheets
+          </Link>
+          <Link href="/#features" className="block px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors" onClick={() => setOpen(false)}>
+            Features
+          </Link>
+          <Link href="/#faq" className="block px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors" onClick={() => setOpen(false)}>
+            FAQ
+          </Link>
+          <div className="pt-2 border-t border-border/40 mt-2 space-y-1">
+            {session ? (
+              <>
+                <Link href="/dashboard" className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors" onClick={() => setOpen(false)}>
+                  <LayoutDashboard size={14} /> Dashboard
+                </Link>
+                <button onClick={() => signOut({ callbackUrl: "/" })} className="flex items-center gap-2 w-full text-left px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors">
+                  <LogOut size={14} /> Sign out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/signIn" className="block px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors" onClick={() => setOpen(false)}>
+                  Sign in
+                </Link>
+                <Link href="/signUp" className="block px-3 py-2 text-sm bg-indigo-600 text-white rounded-lg text-center font-medium hover:bg-indigo-700 transition-colors" onClick={() => setOpen(false)}>
+                  Get started free
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
+
+export default Header;
