@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
 import AuthProvider from "@/context/AuthProviders";
+import { Toaster } from "@/components/ui/sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -27,14 +28,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${inter.variable} ${syne.variable} antialiased flex flex-col min-h-screen`}
       >
         <AuthProvider>
           <Header />
           <main className="flex-1 pt-14">{children}</main>
-          <Footer />
+          <Toaster richColors position="bottom-right" />
         </AuthProvider>
       </body>
     </html>

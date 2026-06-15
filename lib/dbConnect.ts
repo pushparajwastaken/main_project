@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import dns from "node:dns/promises";
-dns.setServers(["8.8.8.8", "8.8.4.4"]);
+import { setServers } from "dns";
+
 declare global {
   var mongoose: {
     conn: mongoose.Connection | null;
@@ -15,15 +15,19 @@ async function dbConnect(): Promise<mongoose.Connection> {
   if (!process.env.MONGODB_URI) {
     throw new Error("MONGODB_URI is not defined in .env");
   }
-  const MONGODB_URI = process.env.MONGODB_URI;
+
   if (cached.conn) {
     return cached.conn;
   }
 
   if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI, {
+    // System DNS can't resolve Atlas SRV records — force Google DNS before connecting.
+    setServers(["8.8.8.8", "8.8.4.4"]);
+
+    cached.promise = mongoose.connect(process.env.MONGODB_URI, {
       bufferCommands: false,
       maxPoolSize: 10,
+      serverSelectionTimeoutMS: 10000,
     });
   }
 
@@ -33,7 +37,7 @@ async function dbConnect(): Promise<mongoose.Connection> {
     return cached.conn;
   } catch (error) {
     cached.promise = null;
-    console.error("Database connection error:", error);
+    console.error("[dbConnect] connection failed:", error);
     throw error;
   }
 }
