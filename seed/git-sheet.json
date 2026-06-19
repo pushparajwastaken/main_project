@@ -1,0 +1,34 @@
+{
+  "sheet": {
+    "title": "Git and GitHub",
+    "slug": "git-github",
+    "description": "Complete Git and GitHub tutorial.",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 8
+  },
+  "subjects": [
+    {
+      "title": "Git and GitHub",
+      "slug": "git-github-series",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Git and GitHub",
+          "description": "Complete Git and GitHub tutorial",
+          "order": 1,
+          "difficulty": "easy",
+          "questions": [
+            {
+              "title": "Git and GitHub",
+              "url": "https://www.youtube.com/watch?v=q8EevlEpQ2A",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

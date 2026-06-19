@@ -1,0 +1,153 @@
+{
+  "sheet": {
+    "title": "Chai aur C++",
+    "slug": "cpp-chai-aur-code",
+    "description": "Complete C++ series by Chai aur Code.",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 6
+  },
+  "subjects": [
+    {
+      "title": "Chai aur C++",
+      "slug": "cpp-chai-aur-code-series",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Chai aur C++ Series",
+          "description": "Complete C++ series by Chai aur Code",
+          "order": 1,
+          "difficulty": "easy",
+          "questions": [
+            {
+              "title": "C++ Course launch | Chai aur C++",
+              "url": "https://www.youtube.com/watch?v=gCkPJTSZ9mU",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Going in depth of Hello World | chai aur C++",
+              "url": "https://www.youtube.com/watch?v=H-57MLM5Tyc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Variables and constants in c++",
+              "url": "https://www.youtube.com/watch?v=YHGqfKh8n4Q",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Data types and challenges in C++",
+              "url": "https://www.youtube.com/watch?v=tATskvdm3NM",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Operators and challenges in cpp",
+              "url": "https://www.youtube.com/watch?v=vy4FvPCp0XA",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Conditionals and challenges in c++",
+              "url": "https://www.youtube.com/watch?v=bHpJaWNMHLo",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Loops in C++",
+              "url": "https://www.youtube.com/watch?v=eWJt3Lamnhg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Functions in c++",
+              "url": "https://www.youtube.com/watch?v=OziGAvXDMOA",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Object Oriented Programming in C++",
+              "url": "https://www.youtube.com/watch?v=7G4IkcCqNlc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Array, dynamic memory and Pointers in Cpp",
+              "url": "https://www.youtube.com/watch?v=h1S6YKHKrNs",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "Constructor, destructor and Copy Constructor in C++",
+              "url": "https://www.youtube.com/watch?v=6R-CFloUX0U",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            },
+            {
+              "title": "Friend Keyword in C++",
+              "url": "https://www.youtube.com/watch?v=OkL5PQxJAqI",
+              "type": "video",
+              "platform": "youtube",
+              "order": 12
+            },
+            {
+              "title": "Getter Setter and delegating constructor",
+              "url": "https://www.youtube.com/watch?v=GIg-iOXw3w8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 13
+            },
+            {
+              "title": "Encapsulation, Abstract class, virtual function in c++",
+              "url": "https://www.youtube.com/watch?v=Ksi7hNouJdM",
+              "type": "video",
+              "platform": "youtube",
+              "order": 14
+            },
+            {
+              "title": "Inheritance and final keyword in c++",
+              "url": "https://www.youtube.com/watch?v=wLItTkq6O-w",
+              "type": "video",
+              "platform": "youtube",
+              "order": 15
+            },
+            {
+              "title": "Building an online store with STL in c++",
+              "url": "https://www.youtube.com/watch?v=0StscizseYY",
+              "type": "video",
+              "platform": "youtube",
+              "order": 16
+            },
+            {
+              "title": "Building Employee Management with STL in C++",
+              "url": "https://www.youtube.com/watch?v=Fw-ew5Hio14",
+              "type": "video",
+              "platform": "youtube",
+              "order": 17
+            },
+            {
+              "title": "Farewell to C++ series",
+              "url": "https://www.youtube.com/watch?v=aXiVBbjXSR8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 18
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

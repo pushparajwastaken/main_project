@@ -1,0 +1,251 @@
+{
+  "sheet": {
+    "title": "Operating Systems for Placements",
+    "slug": "os-love-babbar",
+    "description": "Complete Operating Systems Placements Series 2022 by Love Babbar (CodeHelp).",
+    "isPremium": false,
+    "isPublished": true,
+    "order": 2
+  },
+  "subjects": [
+    {
+      "title": "Operating Systems for Placements",
+      "slug": "os-placements",
+      "order": 1,
+      "topics": [
+        {
+          "title": "OS Placements Series",
+          "description": "Complete OS series by Love Babbar for placement interviews",
+          "order": 1,
+          "difficulty": "medium",
+          "questions": [
+            {
+              "title": "Introduction to Operating Systems Placements Course 2022",
+              "url": "https://www.youtube.com/watch?v=_TpOHMCODXo",
+              "type": "video",
+              "platform": "youtube",
+              "order": 1
+            },
+            {
+              "title": "Lecture 1: What is an Operating System?",
+              "url": "https://www.youtube.com/watch?v=a1l4MceYHaQ",
+              "type": "video",
+              "platform": "youtube",
+              "order": 2
+            },
+            {
+              "title": "Lecture 2: Types of Operating Systems",
+              "url": "https://www.youtube.com/watch?v=LBqNWOqSzBA",
+              "type": "video",
+              "platform": "youtube",
+              "order": 3
+            },
+            {
+              "title": "Lecture 3: Multi-Tasking vs Multi-Threading",
+              "url": "https://www.youtube.com/watch?v=iAnEvdCya6M",
+              "type": "video",
+              "platform": "youtube",
+              "order": 4
+            },
+            {
+              "title": "Lecture 4: Components of Operating System",
+              "url": "https://www.youtube.com/watch?v=kHMXP_i6zew",
+              "type": "video",
+              "platform": "youtube",
+              "order": 5
+            },
+            {
+              "title": "Lecture 5: System Calls in Operating System [Theory + Example + Hands-on Terminal]",
+              "url": "https://www.youtube.com/watch?v=lo8Z61qCDqQ",
+              "type": "video",
+              "platform": "youtube",
+              "order": 6
+            },
+            {
+              "title": "Lecture 6: How Operating System Boots up?",
+              "url": "https://www.youtube.com/watch?v=nAr2sLiLDWw",
+              "type": "video",
+              "platform": "youtube",
+              "order": 7
+            },
+            {
+              "title": "Lecture 7: Difference between 32-bit & 64-bit Operating System",
+              "url": "https://www.youtube.com/watch?v=cE6WoaUnpAM",
+              "type": "video",
+              "platform": "youtube",
+              "order": 8
+            },
+            {
+              "title": "Lecture 8: Comparison between different STORAGES used in Computer",
+              "url": "https://www.youtube.com/watch?v=KFIStTj2DFw",
+              "type": "video",
+              "platform": "youtube",
+              "order": 9
+            },
+            {
+              "title": "Lecture 9: How OS creates a PROCESS || Introduction to Process",
+              "url": "https://www.youtube.com/watch?v=ev4PrTlTKzE",
+              "type": "video",
+              "platform": "youtube",
+              "order": 10
+            },
+            {
+              "title": "Lecture 10: What are different Process States in Operating System?",
+              "url": "https://www.youtube.com/watch?v=BoH-yzA2nj8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 11
+            },
+            {
+              "title": "Lecture 11: Context Switching in OS | Medium Term Scheduler | Orphan/Zombie Process",
+              "url": "https://www.youtube.com/watch?v=arlIBez-W_I",
+              "type": "video",
+              "platform": "youtube",
+              "order": 12
+            },
+            {
+              "title": "Lecture 12: What is Convoy Effect | FCFS CPU Scheduling Algorithm",
+              "url": "https://www.youtube.com/watch?v=lLmqbQnLM4A",
+              "type": "video",
+              "platform": "youtube",
+              "order": 13
+            },
+            {
+              "title": "Lecture 13: Shortest Job First Algorithm | Priority Scheduling | Round Robin CPU Scheduling",
+              "url": "https://www.youtube.com/watch?v=AXrF0AmMYlc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 14
+            },
+            {
+              "title": "Lecture 14: Multi Level Queue Scheduling || MLFQ || Comparison btw CPU Scheduling Algorithms",
+              "url": "https://www.youtube.com/watch?v=ly5Ume_Crsk",
+              "type": "video",
+              "platform": "youtube",
+              "order": 15
+            },
+            {
+              "title": "Lecture 15: What is Concurrency? || Multi-Threading in C++ || Operating Systems Placement Series",
+              "url": "https://www.youtube.com/watch?v=S7Aym-4-iUc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 16
+            },
+            {
+              "title": "Lecture 16: Critical Section Problem || Race condition in OS",
+              "url": "https://www.youtube.com/watch?v=6NEJ3-nOQek",
+              "type": "video",
+              "platform": "youtube",
+              "order": 17
+            },
+            {
+              "title": "Lecture 17: Conditional Variables & Semaphores to Synchronise Threads",
+              "url": "https://www.youtube.com/watch?v=AeDvGSbnoBE",
+              "type": "video",
+              "platform": "youtube",
+              "order": 18
+            },
+            {
+              "title": "Lecture 18: Producer Consumer Problem and its Solution || OS Placement Series",
+              "url": "https://www.youtube.com/watch?v=lY64CSlnjpg",
+              "type": "video",
+              "platform": "youtube",
+              "order": 19
+            },
+            {
+              "title": "Lecture 19: Reader-Writer Problem and its Solution || OS Placement Series",
+              "url": "https://www.youtube.com/watch?v=TyJ3as7haIU",
+              "type": "video",
+              "platform": "youtube",
+              "order": 20
+            },
+            {
+              "title": "Lecture 20: The Dining Philosophers Problem & its Solution",
+              "url": "https://www.youtube.com/watch?v=PIaIJCUZbf4",
+              "type": "video",
+              "platform": "youtube",
+              "order": 21
+            },
+            {
+              "title": "Lecture 21: What is Deadlock | Necessary Conditions | Handling Methods | Part - 1",
+              "url": "https://www.youtube.com/watch?v=pkTekFvauhU",
+              "type": "video",
+              "platform": "youtube",
+              "order": 22
+            },
+            {
+              "title": "Lecture 22: Deadlock Avoidance | Deadlock Detection and Recovery | Part - 2",
+              "url": "https://www.youtube.com/watch?v=dupdUhx1fns",
+              "type": "video",
+              "platform": "youtube",
+              "order": 23
+            },
+            {
+              "title": "Lecture 23: Solving LeetCode Problems on Concurrency || OS Placement Series",
+              "url": "https://www.youtube.com/watch?v=pOfDCjYm6Kk",
+              "type": "video",
+              "platform": "youtube",
+              "order": 24
+            },
+            {
+              "title": "Lecture 24: Memory Management in OS || Contiguous Memory Allocation",
+              "url": "https://www.youtube.com/watch?v=ZNcArN7ODrw",
+              "type": "video",
+              "platform": "youtube",
+              "order": 25
+            },
+            {
+              "title": "Lecture 25: How OS manages Free Space? || Memory Management",
+              "url": "https://www.youtube.com/watch?v=_hrKEA1sEUo",
+              "type": "video",
+              "platform": "youtube",
+              "order": 26
+            },
+            {
+              "title": "Lecture 26: What is Paging? || Non-Contiguous Memory Allocation",
+              "url": "https://www.youtube.com/watch?v=P65WxiAjySs",
+              "type": "video",
+              "platform": "youtube",
+              "order": 27
+            },
+            {
+              "title": "Lecture 27: What is Segmentation || Non-Contiguous Memory Allocation",
+              "url": "https://www.youtube.com/watch?v=fRPz3dQ2LZc",
+              "type": "video",
+              "platform": "youtube",
+              "order": 28
+            },
+            {
+              "title": "Lecture 28: What is Virtual Memory? || Page fault in OS",
+              "url": "https://www.youtube.com/watch?v=U7wsluje5lU",
+              "type": "video",
+              "platform": "youtube",
+              "order": 29
+            },
+            {
+              "title": "Lecture 29: Page Replacement Algorithms || How to implement LRU algorithm?",
+              "url": "https://www.youtube.com/watch?v=S727dgU0pU8",
+              "type": "video",
+              "platform": "youtube",
+              "order": 30
+            },
+            {
+              "title": "Lecture 30: What is Thrashing? || Important Interview Question",
+              "url": "https://www.youtube.com/watch?v=gA34TuSHAHk",
+              "type": "video",
+              "platform": "youtube",
+              "order": 31
+            },
+            {
+              "title": "Bonus Session: Solving LeetCode Problems on Concurrency || Operating Systems Placement Series",
+              "url": "https://www.youtube.com/watch?v=9xS77QBL8W0",
+              "type": "video",
+              "platform": "youtube",
+              "order": 32
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
